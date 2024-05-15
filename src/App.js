@@ -6,6 +6,7 @@ import Blog from "./pages/Blog/Blog";
 import Contact from "./pages/Contact/Contact";
 import About from "./pages/About/About";
 import NoPage from "./pages/NoPage/NoPage";
+import './styles/Global/global.scss';
 
 function App() {
   return (
