@@ -1,18 +1,24 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.css';
-import Accordion from "../../components/specific/Accordion";
+import Accordion from "../../components/specific/Accordion/Accordion.js";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import Image from '../../assets/images/Image.jpg';
-import '../../pages/Home/Home.module.scss';
+import '../../pages/Home/Home.scss';
+
+
 
 
 const Home = () => {
+
+
+
   return (
 
     /*Home Page Content */
     <div className="Home-content">
-      <div className="container-fluid">
+      <div className="main">
 
         {/** Hero */}
         <div className="Hero">
@@ -32,11 +38,11 @@ const Home = () => {
                 </div>
                 <div className="hero-testimonial">
                   <span>
-                  <FontAwesomeIcon icon="fa-regular fa-star" />
-                  <FontAwesomeIcon icon="fa-regular fa-star" />
-                  <FontAwesomeIcon icon="fa-regular fa-star" />
-                  <FontAwesomeIcon icon="fa-regular fa-star" />
-                  <FontAwesomeIcon icon="fa-regular fa-star" />
+                    <FontAwesomeIcon icon="fa-regular fa-star" />
+                    <FontAwesomeIcon icon="fa-regular fa-star" />
+                    <FontAwesomeIcon icon="fa-regular fa-star" />
+                    <FontAwesomeIcon icon="fa-regular fa-star" />
+                    <FontAwesomeIcon icon="fa-regular fa-star" />
                   </span>
                   <p>Our new site has a 60% higher conversion rate than our old one</p>
                   <span> <h6>John Smith</h6></span>
@@ -60,18 +66,18 @@ const Home = () => {
             <div className="row">
               <div className="col">
                 <span>Rating stars</span>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt ipsum, sit in officiis harum, quidem et accusantium esse culpa debitis nihil eos quibusdam sunt maiores. Debitis rem ipsum veritatis sapiente!</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
                 <span> <h6>John Doe</h6></span>
               </div>
               <div className="col">
                 <span>Rating stars</span>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt ipsum, sit in officiis harum, quidem et accusantium esse culpa debitis nihil eos quibusdam sunt maiores. Debitis rem ipsum veritatis sapiente!</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
                 <span> <h6>John Doe</h6></span>
 
               </div>
               <div className="col">
                 <span>Rating stars</span>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt ipsum, sit in officiis harum, quidem et accusantium esse culpa debitis nihil eos quibusdam sunt maiores. Debitis rem ipsum veritatis sapiente!</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
                 <span> <h6>John Doe</h6></span>
 
               </div>
@@ -117,31 +123,40 @@ const Home = () => {
             </div>
             <div className="row">
               <div className="col">
-                <h2>26.3</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-
-              </div>
-              <div className="col">
-                <h2>26.3</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-
+              <div className="result-text">
+                  <h2>26.3</h2>
+                  <p>Return on as spend </p>
+                </div>
 
 
               </div>
               <div className="col">
-                <h2>26.3</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                <div className="result-text">
+                  <h2>502%</h2>
+                  <p>ROI on marketing</p>
+                </div>
 
 
               </div>
               <div className="col">
-                <h2>26.3</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                <div className="result-text">
+                  <h2>27%</h2>
+                  <p>Conversion Optimization Rate</p>
+                </div>
+
+
+              </div>
+              <div className="col">
+                <div className="result-text">
+                  <h2>25%</h2>
+                  <p>Augmented Visit Retention </p>
+                </div>
 
 
               </div>
 
             </div>
+
 
           </div>
 
@@ -158,31 +173,38 @@ const Home = () => {
             </div>
             <div className="row">
               <div className="col">
-                <div className="img">
-                <img className="img-fluid" src={Image} alt="Image" />
+                <div className="blog">
+                  <div className="img">
+                    <img className="img-fluid" src={Image} alt="Image" />
+                  </div>
+                  <div className="blog-preview">
+                    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. </h2>
+                    <a href="">Read on</a>
+                  </div>
                 </div>
-                <div className="blog-preview">
-                  <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. </h2>
-                  <a href="">Read</a>
-                </div>
+
 
               </div>
               <div className="col">
-                <div className="img">
-                <img className="img-fluid" src={Image} alt="Image" />
-                </div>
-                <div className="blog-preview">
-                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. </h2>
-                  <a href="">Read</a>
+                <div className="blog">
+                  <div className="img">
+                    <img className="img-fluid" src={Image} alt="Image" />
+                  </div>
+                  <div className="blog-preview">
+                    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. </h2>
+                    <a href="">Read on</a>
+                  </div>
                 </div>
               </div>
               <div className="col">
-                <div className="img">
-                <img className="img-fluid" src={Image} alt="Image" />
-                </div>
-                <div className="blog-preview">
-                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. </h2>
-                  <a href="">Read</a>
+                <div className="blog">
+                  <div className="img">
+                    <img className="img-fluid" src={Image} alt="Image" />
+                  </div>
+                  <div className="blog-preview">
+                    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. </h2>
+                    <a href="">Read on</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -197,7 +219,7 @@ const Home = () => {
 
             <div className="row">
               <div className="title">
-                <h1>Frequently asked questions</h1>
+                <h1 className="text-center">Frequently asked questions</h1>
               </div>
               <Accordion />
             </div>

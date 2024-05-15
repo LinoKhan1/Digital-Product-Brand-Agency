@@ -1,0 +1,108 @@
+/* Home.module.css */
+
+/* Hero Section */
+.Home-content .main .Hero{
+    background-color: #040402;
+    color:#fff;
+}
+
+/* Testimonial */
+.Testimonial{
+    background-color: #f6f7fa;
+    span h6{
+        color: grey;
+        font-weight: 300;
+    }
+}
+
+/* Services */
+.Services{
+    ul li{
+        color: #0F1825B3;
+        position: relative;
+        list-style-type: none;
+        width: 60%;
+        padding-bottom: 16px;
+        padding-top: 16px;
+        border-bottom: 1px solid rgba(15, 24, 37, 0.1); /* Adjust the alpha value (0.7) to make the color lighter */
+    }
+}
+/* Results */
+.Result{
+    background-color: #f6f7fa;
+   
+    .row{
+        position: relative;
+        padding-bottom: 50px;
+    }
+    .col .result-text{
+        background-color: #1A27C9 ;
+        color: #fff;
+        padding: 30px;
+        border-radius: 25px;
+        h2{
+            font-size: 4rem;
+        }
+        p{
+            position: relative;
+            padding-top: 50px;
+        }
+
+    }
+}
+
+/* Resources */
+.Resources{
+
+    .blog{
+        background-color: #f6f7fa;
+        margin-top: 50px;
+        transition: box-shadow 0.3s ease;
+
+        .blog-preview{
+            position: relative;
+            padding: 50px;
+
+            a{
+                color: #000;
+                text-decoration: none;
+            }
+        }
+
+    }
+    .blog:hover{
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.2); /* Adjust the values as needed */
+    }
+    
+
+}
+/* Questions Asked */
+.Questions{
+    background-color: #f6f7fa;
+
+}
+
+.accordion-container{
+    position: relative;
+    width: 60%;
+    margin: auto;
+}
+.accordion-item{
+    position: relative;
+    margin-top: 25px;
+    margin-top: 25px;
+    h3 button{
+        font-size: 1.4rem;
+    }
+}
+  
+  .accordion-header {
+    font-size: 1.4rem;
+  }
+  
+  .accordion-body {
+    position: relative;
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin-top: 24px;
+  }
