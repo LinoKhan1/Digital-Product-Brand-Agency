@@ -1,10 +1,93 @@
 /* Global Styles */
 
 @import url(./font.css);
+@import url(./variable.scss);
+
 /* Define global styles here */
-body{
+
+body,html{
 
     font-family: 'Calibri';
     margin: 0;
     padding: 0;
 }
+
+/* Section*/
+.section{
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/* Container Fluid */
+.container-fluid{
+    position: relative;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+/* Typography.scss */
+
+h1 {
+    font-size: 4rem;
+    margin-top: 24px;
+    margin-bottom: 24px;
+
+}
+
+h2 {
+    font-size: 3rem;
+
+    
+}
+
+span h6 {
+    font-size: 1.3rem;
+}
+
+p {
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin-top: 24px;
+    margin-bottom: 24px;
+
+}
+
+li {
+
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+a{
+    font-size: 1.4rem;
+}
+
+/* Buttons */
+
+
+
+span .btn-primary{
+
+    background-color: #1A27C9 ;
+    padding: 15px 40px 15px 40px;
+    font-weight: 300;
+    border:none;
+    font-size: 1.4rem;
+    color: #fff;
+    margin-right: 10px;
+
+
+}
+
+span .btn-secondary{
+
+    background-color: #1A27C9 ;
+    font-weight: 300;
+    padding: 15px 40px 15px 40px;
+    border:none;
+    font-size: 1.4rem;
+    color: #fff;
+    margin-left: 10px;
+
+}
+
