@@ -8,6 +8,7 @@ import About from "./pages/About/About";
 import NoPage from "./pages/NoPage/NoPage";
 import './styles/Global/global.scss';
 import './pages/Home/Home.scss';
+import './components/layout/layout.scss';
 
 
 function App() {

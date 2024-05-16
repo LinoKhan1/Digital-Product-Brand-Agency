@@ -70,13 +70,26 @@ a{
 }
 
 /* Buttons */
+.rocket{
+    position: relative;
+    padding-right: 10px;
+}
 
+.d-flex .btn-primary{
+    background-color: #1A27C9 ;
+    padding: 16px 28px;
+    font-weight: 300;
+    border:none;
+    font-size: 1.4rem;
+    color: #fff;
+    margin-right: 10px;
 
+}
 
 span .btn-primary{
 
     background-color: #1A27C9 ;
-    padding: 15px 40px 15px 40px;
+    padding: 16px 28px;
     font-weight: 300;
     border:none;
     font-size: 1.4rem;
@@ -90,11 +103,21 @@ span .btn-secondary{
 
     background-color: #1A27C9 ;
     font-weight: 300;
-    padding: 15px 40px 15px 40px;
+    padding: 16px 28px;
     border:none;
     font-size: 1.4rem;
     color: #fff;
     margin-left: 10px;
 
+}
+
+/* Stars */
+
+
+
+.star{
+    color:#FECD3C;
+    position: relative;
+    padding-right: 4px;
 }
 

@@ -3,7 +3,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.css';
 import Accordion from "../../components/specific/Accordion/Accordion.js";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar, faCheckCircle, faRocket } from "@fortawesome/free-solid-svg-icons";
 
+import Test1 from '../../assets/images/test1.jpg';
+import Test2 from '../../assets/images/test2.jpg';
+import Test3 from '../../assets/images/test3.jpg';
+import Test4 from '../../assets/images/test4.jpg';
+import Footer from "../../components/layout/Footer.jsx";
 import Image from '../../assets/images/Image.jpg';
 import '../../pages/Home/Home.scss';
 
@@ -31,21 +37,22 @@ const Home = () => {
                   <h1 className="display-1">Get a beautiful website that drives revenue</h1>
                   <p>Results-driven web design, development, SEO, branding, copywriting & digital strategy.</p>
                   <span>
-                    <button className="btn-primary"> Get a proposal</button>
+                    <button className="btn-primary"><FontAwesomeIcon className="rocket" icon={faRocket} />
+                      Get a proposal</button>
                     <button className="btn-secondary"> View services</button>
                   </span>
 
                 </div>
                 <div className="hero-testimonial">
-                  <span>
-                    <FontAwesomeIcon icon="fa-regular fa-star" />
-                    <FontAwesomeIcon icon="fa-regular fa-star" />
-                    <FontAwesomeIcon icon="fa-regular fa-star" />
-                    <FontAwesomeIcon icon="fa-regular fa-star" />
-                    <FontAwesomeIcon icon="fa-regular fa-star" />
+                  <span className="rating">
+                    <FontAwesomeIcon className="star" icon={faStar} />
+                    <FontAwesomeIcon className="star" icon={faStar} />
+                    <FontAwesomeIcon className="star" icon={faStar} />
+                    <FontAwesomeIcon className="star" icon={faStar} />
+                    <FontAwesomeIcon className="star" icon={faStar} />
                   </span>
                   <p>Our new site has a 60% higher conversion rate than our old one</p>
-                  <span> <h6>John Smith</h6></span>
+                  <span><img className="portrait" src={Test1} alt="portrait"/> <h6>John Smith</h6></span>
                 </div>
 
               </div>
@@ -65,20 +72,38 @@ const Home = () => {
 
             <div className="row">
               <div className="col">
-                <span>Rating stars</span>
+                <span>
+                  <FontAwesomeIcon className="star" icon={faStar} />
+                  <FontAwesomeIcon className="star" icon={faStar} />
+                  <FontAwesomeIcon className="star" icon={faStar} />
+                  <FontAwesomeIcon className="star" icon={faStar} />
+                  <FontAwesomeIcon className="star" icon={faStar} />
+                </span>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
-                <span> <h6>John Doe</h6></span>
+                <span><img className="portrait" src={Test2} alt="portrait"/> <h6>John Smith</h6></span>
               </div>
               <div className="col">
-                <span>Rating stars</span>
+                <span>
+                  <FontAwesomeIcon className="star" icon={faStar} />
+                  <FontAwesomeIcon className="star" icon={faStar} />
+                  <FontAwesomeIcon className="star" icon={faStar} />
+                  <FontAwesomeIcon className="star" icon={faStar} />
+                  <FontAwesomeIcon className="star" icon={faStar} />
+                </span>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
-                <span> <h6>John Doe</h6></span>
+                <span><img className="portrait" src={Test3} alt="portrait"/> <h6>John Smith</h6></span>
 
               </div>
               <div className="col">
-                <span>Rating stars</span>
+                <span>
+                  <FontAwesomeIcon className="star" icon={faStar} />
+                  <FontAwesomeIcon className="star" icon={faStar} />
+                  <FontAwesomeIcon className="star" icon={faStar} />
+                  <FontAwesomeIcon className="star" icon={faStar} />
+                  <FontAwesomeIcon className="star" icon={faStar} />
+                </span>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
-                <span> <h6>John Doe</h6></span>
+                <span><img className="portrait" src={Test4} alt="portrait"/> <h6>John Smith</h6></span>
 
               </div>
             </div>
@@ -99,10 +124,25 @@ const Home = () => {
               <div className="col-lg-6">
                 <h1>Everything your site needs for success</h1>
                 <ul>
-                  <li>Web design and development</li>
-                  <li>Search Engine Optimization SEOs</li>
-                  <li>User experience an interface design</li>
-                  <li>Brand and identity design</li>
+
+                  <li>
+                    <span><FontAwesomeIcon className="check" icon={faCheckCircle} /></span>
+                    Web design and development
+                  </li>
+                  <li>
+                    <span><FontAwesomeIcon className="check" icon={faCheckCircle} /></span>
+                    Search Engine Optimization SEOs
+                  </li>
+                  <li>
+                    <span><FontAwesomeIcon className="check" icon={faCheckCircle} /></span>
+
+                    User experience an interface design
+                  </li>
+                  <li>
+                    <span><FontAwesomeIcon className="check" icon={faCheckCircle} /></span>
+
+                    Brand and identity design
+                  </li>
                 </ul>
 
               </div>
@@ -123,7 +163,7 @@ const Home = () => {
             </div>
             <div className="row">
               <div className="col">
-              <div className="result-text">
+                <div className="result-text">
                   <h2>26.3</h2>
                   <p>Return on as spend </p>
                 </div>
@@ -228,6 +268,8 @@ const Home = () => {
 
         </div>
       </div>
+      {/** Footer */}
+      <Footer />
 
     </div>
   )

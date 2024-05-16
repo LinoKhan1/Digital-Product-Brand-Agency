@@ -1,0 +1,74 @@
+/* layout.scss */
+
+/* Navigation */
+.navbar{
+    position: relative;
+    background-color: #040402;
+    padding: 50px;
+    .navbar-nav{
+
+        position: relative;
+        margin-right: 16px;
+        li{
+            position: relative;
+            padding-right: 16px;
+    
+        }
+        
+        li:hover{
+            border-top: 2px solid #1A27C9;
+        }
+    }
+    
+    
+}
+
+
+/* Footer */
+
+.footer {
+
+    background-color: #FECD3C;
+
+    /* Contact */
+    .contact {
+        position: relative;
+        width: 60%;
+        margin: auto;
+        text-align: center;
+    }
+
+    /* Footer Content */
+    .footer-content {
+
+        h2 {
+            position: relative;
+            margin-bottom: 24px;
+        }
+
+        ul {
+            padding-left: 0;
+            margin: 0;
+        }
+
+        ul li {
+            position: relative;
+            list-style-type: none;
+            color: #000;
+            padding-bottom: 8px;
+
+        }
+        .social{
+            h2{
+                text-align: right;
+            }
+        }
+    }
+
+    /* Copyright */
+    .copyright {
+        position: relative;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
