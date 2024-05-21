@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../../../pages/Home/Home.scss';
+import '../../pages/Home/Home.scss';
 function Accordion() {
   const [activeIndex, setActiveIndex] = useState(null);
 

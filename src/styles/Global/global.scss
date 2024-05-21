@@ -214,6 +214,16 @@ span .btn-secondary {
 
     }
 
+    .Contact-content{
+        form{
+            padding: 25px;
+
+            input[type=text], input[type=email],textarea{
+                margin-top: 16px;
+            }
+        }
+    }
+
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */

@@ -1,7 +1,7 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.css';
-import Accordion from "../../components/specific/Accordion/Accordion.js";
+import Accordion from "../../components/specific/Accordion.js";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar, faCheckCircle, faRocket } from "@fortawesome/free-solid-svg-icons";
 
@@ -12,6 +12,7 @@ import Test4 from '../../assets/images/test4.jpg';
 import Footer from "../../components/layout/Footer.jsx";
 import Image from '../../assets/images/Image.jpg';
 import '../../pages/Home/Home.scss';
+import ServiceSection from "../../components/specific/Service.js";
 
 const Home = () => {
   return (
@@ -149,6 +150,8 @@ const Home = () => {
 
 
         </div>
+        
+        <ServiceSection/>
 
         {/** Results */}
         <div className="Result">

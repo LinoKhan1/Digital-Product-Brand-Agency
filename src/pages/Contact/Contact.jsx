@@ -12,7 +12,7 @@ const Contact = () => {
                 <div className="options">
                     <div className="section">
 
-                        <img src={Logo} alt="logo-image" />
+                        <Link to="/"><img src={Logo} alt="logo-image" /></Link>
                         <h1 className="display-1">
                             Contact us
                         </h1>

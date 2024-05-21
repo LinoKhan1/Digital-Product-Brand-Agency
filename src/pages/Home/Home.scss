@@ -1,7 +1,7 @@
 /* Home.module.css */
 
 /* Hero Section */
-.Home-content .main .Hero {
+.main .Hero {
     background-color: #040402;
     color: #fff;
 
@@ -52,14 +52,16 @@
 /* Services */
 .Services {
 
-    
-    .row .col-lg-6{
+
+    .row .col-lg-6 {
         padding-right: 50px;
     }
 
-    img{
-        width:100%;
+    img {
+        width: 100%;
+        border-radius: 50px;
     }
+
     h1 {
         position: relative;
     }
@@ -203,13 +205,7 @@
 
 /* Media Queries */
 
-@media only screen and (max-width: 1200px) {
-
-   
-    
-
-
-}
+@media only screen and (max-width: 1200px) {}
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (max-width: 1200px) {
@@ -260,7 +256,8 @@
         .section {
             .row {
 
-                margin:0;
+                margin: 0;
+
                 .col {
                     flex: 100%;
                     max-width: 100%;
@@ -271,9 +268,10 @@
 
     /* Services */
     .Services {
-        .row .col-lg-6{
-            padding-right: 0px;
+        .row .col-lg-6 {
+            padding-right: 50px;
         }
+
         img {
             width: 100%;
         }
@@ -385,3 +383,55 @@
     }
 
 }
+
+
+
+.service-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+  
+    .service-image {
+      flex: 1;
+      padding-right: 20px;
+      
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 8px;
+        transition: opacity 0.3s ease-in-out;
+      }
+    }
+  
+    .service-list {
+      flex: 1;
+      ul {
+        list-style-type: none;
+        padding: 0;
+  
+        li {
+          display: flex;
+          align-items: center;
+          margin-bottom: 10px;
+          padding: 10px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+  
+          &:hover {
+            background-color: #f0f0f0;
+          }
+  
+          .service-thumbnail {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            border-radius: 4px;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+  

@@ -18,7 +18,8 @@ const Navbar = () => {
         <>
             <nav className="navbar navbar-expand-lg">
                 <div className="container-fluid">
-                    <a className="navbar-brand" href="#"> <img className="logo" src={Logo} alt="Image" /></a>
+                    <a className="navbar-brand" href="#"><Link to="/"><img src={Logo} alt="logo-image" /></Link>
+                    </a>
                     <button className="navbar-toggler" type="button" onClick={toggleNav}>
                         <span className="navbar-toggler-icon text-white"></span>
                     </button>

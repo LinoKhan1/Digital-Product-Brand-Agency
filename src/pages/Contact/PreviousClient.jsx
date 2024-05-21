@@ -1,25 +1,45 @@
-import React from "react";
+import React, { useRef } from "react";
 import Logo from '../../assets/images/Logo-white.JPG';
 import '../Contact/contact.scss';
+import { Link } from "react-router-dom";
+import emailjs from '@emailjs/browser';
+
 const Client = () => {
+
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm('service_ni8hifm', 'template_gkzkq4u', form.current, 'xBUmFOBzOS0lwWZLY')
+            .then((result) => {
+                console.log(result.text);
+                console.log("message sent")
+                alert("Your message has been sent!")
+
+            }, (error) => {
+                console.log(error.text);
+            });
+    }
+
 
     return (
         <>
             <div className="Contact-content">
-                <div className="main">
+                <div className="main contact-form">
                     <div className="options">
                         <div className="section">
-                            <img src={Logo} alt="logo-image" />
+                            <Link to="/"><img src={Logo} alt="logo-image" /></Link>
                             <h1 className="display-1">Get In Touch</h1>
                             <p>
                                 Please submit the form below. We will get back to you soon 😃.
 
                             </p>
-                            <form action="">
+                            <form ref={form} onSubmit={sendEmail}>
                                 <div className="row">
                                     <div className="col">
-                                        <label htmlFor="name">First name</label>
-                                        <input type="text" id="name" name="name" placeholder="John" />
+                                        <label htmlFor="user_name">First name</label>
+                                        <input type="text" id="user_name" name="user_name" placeholder="John" />
 
                                     </div>
                                     <div className="col">
@@ -30,8 +50,8 @@ const Client = () => {
 
                                 <div className="row">
                                     <div className="col">
-                                        <label htmlFor="email">Email address</label>
-                                        <input type="email" id="email" name="email" placeholder="johnsmith@gmail.com" />
+                                        <label htmlFor="user_email">Email address</label>
+                                        <input type="email" id="user_email" name="user_email" placeholder="johnsmith@gmail.com" />
 
                                     </div>
                                     <div className="col">
@@ -54,7 +74,7 @@ const Client = () => {
                                 <div className="row">
                                     <label>Message</label>
 
-                                    <textarea name="" id="" placeholder="Type your message here..."></textarea>
+                                    <textarea name="message" id="message" placeholder="Type your message here..."></textarea>
                                     <input type="submit" value="Submit inquiry" />
                                 </div>
                             </form>

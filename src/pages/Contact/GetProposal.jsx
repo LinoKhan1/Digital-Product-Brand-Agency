@@ -1,17 +1,17 @@
 import React from "react";
 import Logo from '../../assets/images/Logo-white.JPG';
 import '../Contact/contact.scss';
-
+import { Link } from "react-router-dom";
 
 const Proposal = () => {
     return (
 
         <>
             <div className="Contact-content">
-                <div className="main">
+                <div className="main contact-form">
                     <div className="options">
                         <div className="section">
-                            <img src={Logo} alt="logo-image" />
+                            <Link to="/"><img src={Logo} alt="logo-image" /></Link>
                             <h1 className="display-1">Get a proposal</h1>
                             <p>
                                 We will be in touch to book a discovery call shortly after you submit the form below 😃.
