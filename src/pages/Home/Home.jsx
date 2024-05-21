@@ -13,13 +13,7 @@ import Footer from "../../components/layout/Footer.jsx";
 import Image from '../../assets/images/Image.jpg';
 import '../../pages/Home/Home.scss';
 
-
-
-
 const Home = () => {
-
-
-
   return (
 
     /*Home Page Content */
@@ -121,22 +115,26 @@ const Home = () => {
                 <img className="img-fluid" src={Image} alt="Image" />
 
               </div>
+              
+
               <div className="col-lg-6">
-                <h1>Everything your site needs for success</h1>
+              <div className="service-content">
+                
+              <h1>Everything your site needs for success</h1>
                 <ul>
 
                   <li>
                     <span><FontAwesomeIcon className="check" icon={faCheckCircle} /></span>
-                    Web design and development
+                    Custom Web design and development
                   </li>
                   <li>
                     <span><FontAwesomeIcon className="check" icon={faCheckCircle} /></span>
-                    Search Engine Optimization SEOs
+                    Search Engine Optimization SEOs 
                   </li>
                   <li>
                     <span><FontAwesomeIcon className="check" icon={faCheckCircle} /></span>
 
-                    User experience an interface design
+                    User experience and interface design 
                   </li>
                   <li>
                     <span><FontAwesomeIcon className="check" icon={faCheckCircle} /></span>
@@ -144,7 +142,7 @@ const Home = () => {
                     Brand and identity design
                   </li>
                 </ul>
-
+                </div>
               </div>
             </div>
           </div>
@@ -165,7 +163,7 @@ const Home = () => {
               <div className="col">
                 <div className="result-text">
                   <h2>26.3</h2>
-                  <p>Return on as spend </p>
+                  <p>ROAS </p>
                 </div>
 
 
@@ -173,7 +171,7 @@ const Home = () => {
               <div className="col">
                 <div className="result-text">
                   <h2>502%</h2>
-                  <p>ROI on marketing</p>
+                  <p>ROI</p>
                 </div>
 
 
@@ -181,15 +179,15 @@ const Home = () => {
               <div className="col">
                 <div className="result-text">
                   <h2>27%</h2>
-                  <p>Conversion Optimization Rate</p>
+                  <p>CRO</p>
                 </div>
 
 
               </div>
               <div className="col">
-                <div className="result-text">
+                <div className="result-text none">
                   <h2>25%</h2>
-                  <p>Augmented Visit Retention </p>
+                  <p>AVR </p>
                 </div>
 
 

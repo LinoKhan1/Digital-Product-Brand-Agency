@@ -1,75 +1,123 @@
 /* Home.module.css */
 
 /* Hero Section */
-.Home-content .main .Hero{
+.Home-content .main .Hero {
     background-color: #040402;
-    color:#fff;
-    
-    .hero-testimonial{
+    color: #fff;
+
+    .hero-testimonial {
         position: relative;
         padding-top: 24px;
 
-        .portrait{
+        .portrait {
             position: relative;
             background-size: contain;
-            width:  50px;
+            width: 50px;
             height: 50px;
             border-radius: 50px;
         }
     }
-    
+
 }
 
 /* Testimonial */
-.Testimonial{
+.Testimonial {
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+
+        .col {
+            flex: 1;
+            margin: 10px;
+        }
+    }
+
     background-color: #f6f7fa;
-    span h6{
+
+    span h6 {
         color: grey;
         font-weight: 300;
     }
-    .portrait{
+
+    .portrait {
         position: relative;
         background-size: contain;
-        width:  50px;
+        width: 50px;
         height: 50px;
         border-radius: 50px;
     }
 }
 
 /* Services */
-.Services{
-    ul li{
+.Services {
+
+    
+    .row .col-lg-6{
+        padding-right: 50px;
+    }
+
+    img{
+        width:100%;
+    }
+    h1 {
+        position: relative;
+    }
+
+    ul {
+        padding-left: 0;
+        margin: 0;
+    }
+
+    ul li {
         color: #0F1825B3;
         position: relative;
         list-style-type: none;
         width: 60%;
         padding-bottom: 16px;
         padding-top: 16px;
-        border-bottom: 1px solid rgba(15, 24, 37, 0.1); /* Adjust the alpha value (0.7) to make the color lighter */
+        border-bottom: 1px solid rgba(15, 24, 37, 0.1);
+        /* Adjust the alpha value (0.7) to make the color lighter */
     }
-    .check{
+
+    .check {
         position: relative;
         padding-right: 24px;
         color: #FECD3C;
     }
 }
+
 /* Results */
-.Result{
+.Result {
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+
+        .col {
+            flex: 1;
+            margin: 10px;
+        }
+    }
+
     background-color: #f6f7fa;
-   
-    .row{
+
+    .row {
         position: relative;
         padding-bottom: 50px;
     }
-    .col .result-text{
-        background-color: #1A27C9 ;
+
+    .col .result-text {
+        background-color: #1A27C9;
         color: #fff;
         padding: 30px;
         border-radius: 25px;
-        h2{
+
+        h2 {
             font-size: 4rem;
         }
-        p{
+
+        p {
             position: relative;
             padding-top: 50px;
         }
@@ -78,57 +126,262 @@
 }
 
 /* Resources */
-.Resources{
+.Resources {
 
-    .blog{
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+
+        .col {
+            flex: 1;
+            margin: 10px;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .blog {
         background-color: #f6f7fa;
         margin-top: 50px;
         transition: box-shadow 0.3s ease;
 
-        .blog-preview{
+        .blog-preview {
             position: relative;
             padding: 50px;
 
-            a{
+            a {
                 color: #000;
                 text-decoration: none;
             }
         }
 
     }
-    .blog:hover{
-        box-shadow: 0 0 40px rgba(0, 0, 0, 0.2); /* Adjust the values as needed */
+
+    .blog:hover {
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+        /* Adjust the values as needed */
     }
-    
+
 
 }
+
 /* Questions Asked */
-.Questions{
+.Questions {
     background-color: #f6f7fa;
 
 }
 
-.accordion-container{
+.accordion-container {
     position: relative;
     width: 60%;
     margin: auto;
 }
-.accordion-item{
+
+.accordion-item {
     position: relative;
     margin-top: 25px;
     margin-top: 25px;
-    h3 button{
+
+    h3 button {
         font-size: 1.4rem;
     }
 }
-  
-  .accordion-header {
+
+.accordion-header {
     font-size: 1.4rem;
-  }
-  
-  .accordion-body {
+}
+
+.accordion-body {
     position: relative;
     font-size: 1.4rem;
     font-weight: 300;
     margin-top: 24px;
-  }
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 1200px) {
+
+   
+    
+
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 1200px) {
+
+    /* Result, Resources*/
+    .Result,
+    .Resources {
+        .section {
+            .row {
+                margin: auto;
+
+                .col {
+                    flex: 100%;
+                    max-width: 47%;
+                }
+            }
+        }
+    }
+
+    /* Services */
+    .Services {
+        width: 80%;
+        margin: auto;
+
+        img {
+
+            width: 100%;
+        }
+
+        .service-content {
+
+            ul li {
+                width: 100%;
+            }
+        }
+    }
+
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+
+    /* Testimonial */
+    .Testimonial,
+    .Result,
+    .Resources {
+        .section {
+            .row {
+
+                margin:0;
+                .col {
+                    flex: 100%;
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+
+    /* Services */
+    .Services {
+        .row .col-lg-6{
+            padding-right: 0px;
+        }
+        img {
+            width: 100%;
+        }
+
+        .service-content {
+            width: 80%;
+            margin: auto;
+
+            ul li {
+                width: 100%;
+            }
+        }
+    }
+
+    /* Accordion */
+    .accordion-container {
+        position: relative;
+        padding-left: 30px;
+        padding-right: 30px;
+        width: 100%;
+    }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+
+    /* Testimonial */
+    .Testimonial,
+    .Result,
+    .Resources {
+        .section {
+            .row {
+
+                .col {
+                    flex: 100%;
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+
+    /* Services */
+    .Services {
+        img {
+            width: 100%;
+        }
+
+        .service-content {
+            width: 80%;
+            margin: auto;
+
+            ul li {
+                width: 100%;
+            }
+        }
+    }
+
+    /* Accordion */
+    .accordion-container {
+        position: relative;
+        padding-left: 25px;
+        padding-right: 25px;
+        width: 100%;
+    }
+
+}
+
+/* Extra small devices (phones, 600ox and down) */
+@media only screen and (max-width: 600px) {
+
+    /* Testimonial */
+    .Testimonial,
+    .Result,
+    .Resources {
+        .section {
+            .row {
+
+                .col {
+                    flex: 100%;
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+
+    /* Services */
+    .Services {
+        img {
+            width: 100%;
+        }
+
+        .service-content {
+            width: 100%;
+            margin: auto;
+
+            ul li {
+                width: 100%;
+            }
+        }
+    }
+
+    /* Accordion */
+    .accordion-container {
+        position: relative;
+        padding-left: 25px;
+        padding-right: 25px;
+        width: 100%;
+    }
+
+}
