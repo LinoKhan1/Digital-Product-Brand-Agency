@@ -31,13 +31,18 @@ html {
 /* Typography.scss */
 
 h1 {
+    font-family: 'Archivo';
+    font-weight: normal;
+    font-style: normal;
     font-size: 4rem;
     margin-top: 24px;
     margin-bottom: 24px;
 
+
 }
 
 h2 {
+
     font-size: 2rem;
 
 }
@@ -123,21 +128,23 @@ span .btn-secondary {
 }
 
 /* Forms */
-.Contact-content{
+.Contact-content {
 
     form {
         background-color: #f6f7fa;
         padding: 50px;
+
         label {
             font-size: 1.4rem;
             font-weight: 300;
             margin-top: 16px;
             margin-bottom: 16px;
         }
-    
-        input[type=text], input[type=email] {
+
+        input[type=text],
+        input[type=email] {
             background-color: #f6f7fa;
-    
+
             font-size: 1.4rem;
             width: 100%;
             padding-bottom: 24px;
@@ -147,10 +154,10 @@ span .btn-secondary {
             border: none;
             border-bottom: 1px solid grey;
         }
-    
-        input[type=button]{
+
+        input[type=button] {
             background-color: #040402;
-    
+
             padding: 10px 30px;
             margin-bottom: 24px;
             border: none;
@@ -158,12 +165,13 @@ span .btn-secondary {
             font-weight: 300;
             color: #fff;
         }
-        span{
+
+        span {
             font-size: 1.4rem;
             font-weight: 300;
         }
-    
-        input[type=submit]{
+
+        input[type=submit] {
             width: 100%;
             margin-top: 24px;
             background-color: #1A27C9;
@@ -173,18 +181,44 @@ span .btn-secondary {
             font-size: 1.4rem;
             color: #fff;
         }
-        textarea{
+
+        textarea {
             background-color: #f6f7fa;
-    
+
             font-size: 1.4rem;
             font-weight: 300;
             padding-bottom: 24px;
             border: none;
             border-bottom: 1px solid grey;
-    
+
         }
     }
-    
+
+}
+
+/* Author Info */
+.author-info {
+    .author-span {
+        display: flex;
+        align-items: center;
+    }
+
+    .author-image {
+        width: 50px;
+        /* Adjust the size as needed */
+        height: 50px;
+        /* Ensure the height is the same as the width for a perfect circle */
+        border-radius: 50%;
+        /* Makes the image circular */
+        margin-right: 10px;
+        /* Space between image and text */
+    }
+
+    .author-name {
+        margin: 0;
+        font-size: 1.5rem;
+        /* Adjust the font size as needed */
+    }
 }
 
 /* Media queries */
@@ -214,11 +248,13 @@ span .btn-secondary {
 
     }
 
-    .Contact-content{
-        form{
+    .Contact-content {
+        form {
             padding: 25px;
 
-            input[type=text], input[type=email],textarea{
+            input[type=text],
+            input[type=email],
+            textarea {
                 margin-top: 16px;
             }
         }

@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import '../../pages/Home/Home.scss';
-import test1 from '../../assets/images/test1.jpg';
-import test2 from '../../assets/images/test2.jpg';
-import test3 from '../../assets/images/test3.jpg';
-import test4 from '../../assets/images/test4.jpg';
+import test1 from '../../assets/images/Design.JPG';
+import test2 from '../../assets/images/Branding.JPG';
+import test3 from '../../assets/images/SEO.jpg';
+import test4 from '../../assets/images/uxuis.JPG';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheckCircle} from "@fortawesome/free-solid-svg-icons";
 
 // Sample service data
 const services = [
@@ -23,14 +25,20 @@ const ServiceSection = () => {
 
   return (
     <div className="service-section">
+      
       <div className="service-image">
         <img src={currentImage} alt="Service" />
       </div>
       <div className="service-list">
+      <h1>Everything your site needs for success</h1>
+
         <ul>
           {services.map(service => (
+
             <li key={service.id} onMouseEnter={() => handleMouseEnter(service.image)}>
               {/*<img src={service.image} alt={service.name} className="service-thumbnail" />*/}
+              <span><FontAwesomeIcon className="check" icon={faCheckCircle} /></span>
+
               {service.name}
             </li>
           ))}

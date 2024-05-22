@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.css';
 import Accordion from "../../components/specific/Accordion.js";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar, faCheckCircle, faRocket } from "@fortawesome/free-solid-svg-icons";
+import { faStar,  faRocket } from "@fortawesome/free-solid-svg-icons";
 
 import Test1 from '../../assets/images/test1.jpg';
 import Test2 from '../../assets/images/test2.jpg';
@@ -13,6 +13,8 @@ import Footer from "../../components/layout/Footer.jsx";
 import Image from '../../assets/images/Image.jpg';
 import '../../pages/Home/Home.scss';
 import ServiceSection from "../../components/specific/Service.js";
+import AuthorInfo from "../../components/specific/AuthorInfo";
+import Scroller from "../../components/specific/Scroller.jsx";
 
 const Home = () => {
   return (
@@ -47,7 +49,7 @@ const Home = () => {
                     <FontAwesomeIcon className="star" icon={faStar} />
                   </span>
                   <p>Our new site has a 60% higher conversion rate than our old one</p>
-                  <span><img className="portrait" src={Test1} alt="portrait"/> <h6>John Smith</h6></span>
+                  <AuthorInfo name="John Doe" imageSrc={Test1} />
                 </div>
 
               </div>
@@ -75,7 +77,7 @@ const Home = () => {
                   <FontAwesomeIcon className="star" icon={faStar} />
                 </span>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
-                <span><img className="portrait" src={Test2} alt="portrait"/> <h6>John Smith</h6></span>
+                <AuthorInfo name="John Doe" imageSrc={Test2} />
               </div>
               <div className="col">
                 <span>
@@ -86,7 +88,7 @@ const Home = () => {
                   <FontAwesomeIcon className="star" icon={faStar} />
                 </span>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
-                <span><img className="portrait" src={Test3} alt="portrait"/> <h6>John Smith</h6></span>
+                <AuthorInfo name="John Doe" imageSrc={Test3} />
 
               </div>
               <div className="col">
@@ -98,7 +100,7 @@ const Home = () => {
                   <FontAwesomeIcon className="star" icon={faStar} />
                 </span>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
-                <span><img className="portrait" src={Test4} alt="portrait"/> <h6>John Smith</h6></span>
+                <AuthorInfo name="John Doe" imageSrc={Test4} />
 
               </div>
             </div>
@@ -108,102 +110,12 @@ const Home = () => {
         </div>
 
         {/** Services */}
-        <div className="Services">
-          <div className="section">
-
-            <div className="row">
-              <div className="col-lg-6">
-                <img className="img-fluid" src={Image} alt="Image" />
-
-              </div>
-              
-
-              <div className="col-lg-6">
-              <div className="service-content">
-                
-              <h1>Everything your site needs for success</h1>
-                <ul>
-
-                  <li>
-                    <span><FontAwesomeIcon className="check" icon={faCheckCircle} /></span>
-                    Custom Web design and development
-                  </li>
-                  <li>
-                    <span><FontAwesomeIcon className="check" icon={faCheckCircle} /></span>
-                    Search Engine Optimization SEOs 
-                  </li>
-                  <li>
-                    <span><FontAwesomeIcon className="check" icon={faCheckCircle} /></span>
-
-                    User experience and interface design 
-                  </li>
-                  <li>
-                    <span><FontAwesomeIcon className="check" icon={faCheckCircle} /></span>
-
-                    Brand and identity design
-                  </li>
-                </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-        </div>
+        
         
         <ServiceSection/>
 
-        {/** Results */}
-        <div className="Result">
-          <div className="section">
-
-            <div className="row">
-              <div className="col-lg-7">
-                <h1>Over the past 5 years, we have delivered measurable results for 113+ businesses.</h1>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col">
-                <div className="result-text">
-                  <h2>26.3</h2>
-                  <p>ROAS </p>
-                </div>
-
-
-              </div>
-              <div className="col">
-                <div className="result-text">
-                  <h2>502%</h2>
-                  <p>ROI</p>
-                </div>
-
-
-              </div>
-              <div className="col">
-                <div className="result-text">
-                  <h2>27%</h2>
-                  <p>CRO</p>
-                </div>
-
-
-              </div>
-              <div className="col">
-                <div className="result-text none">
-                  <h2>25%</h2>
-                  <p>AVR </p>
-                </div>
-
-
-              </div>
-
-            </div>
-
-
-          </div>
-
-
-
-        </div>
+       
+        <Scroller/>
 
         {/** Resources */}
         <div className="Resources">

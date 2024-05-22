@@ -1,100 +1,186 @@
-
 // about.scss
 
 /* About Section */
 
-.about{
-    background-color: #f6f7fa;
+.about {
+  background-color: #f6f7fa;
+  h2{
+    font-weight: 300;
+    margin-bottom: 24px;
+  }
 
 }
+
+/** Work Ethic */
+.work-ethic{
+
+  .title{
+    margin-bottom: 75px;
+  }
+  .row{
+    padding-left: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    .col{
+      flex:1;
+      margin: 10px;
+      padding: 50px;
+      background-color:#f6f7fa;
+      border-radius: 50px;
+      button {
+
+        width: 100%;
+        margin-top: 24px;
+        background-color: #1A27C9;
+        padding: 18px 30px;
+        font-weight: 300;
+        border: none;
+        font-size: 1.4rem;
+        color: #fff;
+      }
+    }
+  }
+}
+
+
 
 
 /* Differentiator */
 .scroller-column {
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .scroll-wrapper {
-    scroll-behavior: smooth;
-  }
+  transition: transform 0.3s ease-in-out;
+}
+
+.scroll-wrapper {
+  scroll-behavior: smooth;
+}
+
 .scroller-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow: hidden;
-    position: relative;
-    padding-top: 75px;
-    padding-bottom: 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+
+.scroller-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 50px;
+  margin-bottom: 50px;
+}
+
+
+
+.scroller-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.scroll-wrapper {
+  display: flex;
+  overflow-x: hidden;
+  /* Hide the scrollbar */
+  padding-left: 100px;
+  width: 100%;
+}
+
+.scroller-row {
+  display: flex;
+}
+
+.scroller-column {
+  max-width: 400px;
+  border: none;
+  flex: 0 0 auto;
+  padding: 20px;
+  background-color: #f6f7fa;
+  margin-right: 20px;
+  text-align: center;
+  border-radius: 50px;
+}
+
+.scroll-button {
+  background-color: #1A27C9;
+  ;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/** Resources */
+.Resources {
+
+  button {
+
+    width: 100%;
+    margin-top: 24px;
+    background-color: #1A27C9;
+    padding: 18px 30px;
+    font-weight: 300;
+    border: none;
+    font-size: 1.4rem;
+    color: #fff;
   }
-  
+
+  h2 {
+    font-weight: 300;
+  }
+}
+
+
+
+@media only screen and (max-width: 1000px){
+
+  /* Work Ethic */
+  .work-ethic{
+    .row{
+      padding-left: 0px;
+      
+    }
+  }
+
+}
+
+@media only screen and  (max-width: 768px) {
+  /* Differentiator */
   .scroller-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 0 50px;
-    margin-bottom: 50px;
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
-  
-  
+
   .scroller-buttons {
-    display: flex;
-    gap: 10px;
+    margin-top: 10px;
   }
-  
+
   .scroll-wrapper {
-    display: flex;
-    overflow-x: hidden; /* Hide the scrollbar */
-    padding-left: 100px;
-    width: 100%;
+    padding-left: 20px;
   }
-  
-  .scroller-row {
-    display: flex;
-  }
-  
+
   .scroller-column {
-    max-width: 400px;
-    border: none;
-    flex: 0 0 auto;
-    padding: 20px;
-    background-color: #f6f7fa;
-    margin-right: 20px;
-    text-align: center;
-    border-radius: 50px;
+    min-width: 200px;
   }
-  
-  .scroll-button {
-    background-color: #1A27C9;;
-    color: white;
-    border: none;
-    padding: 10px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  @media (max-width: 768px) {
-    .scroller-header {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    
-    .scroller-buttons {
-      margin-top: 10px;
-    }
-  
-    .scroll-wrapper {
-      padding-left: 20px;
-    }
-  
-    .scroller-column {
-      min-width: 200px;
+}
+
+@media only screen and (max-width:600px){
+  /* Work Ethic */
+  .work-ethic{
+    .row{
+      .col{
+        width: 100%;
+        flex: 100%;
+      }
     }
   }
-  
+}
+

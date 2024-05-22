@@ -27,3 +27,40 @@
     font-weight: bold;
     font-style: italic;
 }
+
+@font-face{
+    font-family: 'ReadexPro';
+    src: url('../../assets//fonts/Readex_Pro/static/ReadexPro-Regular.ttf') format('tff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Archivo';
+    src: url('../../assets//fonts/Archivo/static/Archivo-Black.ttf');
+}
+@font-face {
+    font-family: 'Archivo';
+    src: url('../../assets//fonts/Archivo/static/Archivo-BlackItalic.ttf');
+}
+@font-face {
+    font-family: 'Archivo';
+    src: url('../../assets//fonts/Archivo/static/Archivo-Bold.ttf');
+}
+@font-face {
+    font-family: 'Archivo';
+    src: url('../../assets//fonts/Archivo/static/Archivo-BoldItalic.ttf');
+}
+@font-face {
+    font-family: 'Archivo';
+    src: url('../../assets//fonts/Archivo/static/Archivo-ExtraBold.ttf');
+}
+@font-face {
+    font-family: 'Archivo';
+    src: url('../../assets//fonts/Archivo/static/Archivo-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+

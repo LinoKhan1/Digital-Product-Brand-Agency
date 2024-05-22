@@ -6,6 +6,12 @@ import '../../pages/Home/Home.scss';
 import '../../pages/About/about.scss';
 import Footer from '../../components/layout/Footer';
 import ColumnScroller from "../../components/specific/ColumnScroller";
+import { Link } from "react-router-dom";
+import AuthorInfo from "../../components/specific/AuthorInfo";
+
+
+
+
 
 const About = () => {
   return (
@@ -20,7 +26,7 @@ const About = () => {
               <div className="col-lg-7">
                 <div className="hero-text">
                   <h1 className="display-1">
-                    We work smarter. We can help your business!
+                    We work smarter. We can help you.
                   </h1>
                   <span>
                     <button className="btn-primary"><FontAwesomeIcon className="rocket" icon={faRocket} />
@@ -37,7 +43,8 @@ const About = () => {
                     <FontAwesomeIcon className="star" icon={faStar} />
                   </span>
                   <p>Our new site has a 60% higher conversion rate than our old one</p>
-                  <span><img className="portrait" src={Test1} alt="portrait" /> <h6>John Smith</h6></span>
+                  <AuthorInfo name="John Doe" imageSrc={Test1} />
+
                 </div>
               </div>
             </div>
@@ -48,23 +55,25 @@ const About = () => {
         <div className="about">
           <div className="section">
             <div className="row">
-              <div className="col">
-                <h1>
-                  Smarter
+              <div className="col-lg-5">
+                <p>
+                  _Smarter
                   Digital.
-                </h1>
-                <h2>
+                </p>
+                
+
+              </div>
+              <div className="col-lg-6">
+              <h2>
                   linokhan.com is a Full Service Digital Brand & Marketing Agency that Delivers Smarter Digital.
                 </h2>
 
-              </div>
-              <div className="col">
-                <p>
+                <h2>
                   We are a dedicated team, offering a comprehensive approach to brand strategy, digital design, development, and online marketing. Our team chooses to work with brands that excite and inspire. Together, we are working to grow forward-thinking, relevant brands.
-                </p>
-                <p>
+                </h2>
+                <h2>
                   We work within many industries, both conventional and unconventional. Specialized in reaching mass market consumers.
-                </p>
+                </h2>
 
               </div>
             </div>
@@ -74,9 +83,12 @@ const About = () => {
         {/** Work Ethic */}
         <div className="work-ethic">
           <div className="section">
+            
             <div className="title">
-              <h1>Driving The Work We Create
-                Our Code</h1>
+              <p>
+                _Driving The Work We Create
+                Our Code
+              </p>
 
             </div>
             <div className="row">
@@ -102,33 +114,12 @@ const About = () => {
                 </p>
 
 
-              </div>
-              <div className="col">
-                <h2>
-                  Lorem Ipsum
-
-                </h2>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi expedita temporibus a, eaque saepe at odit laborum libero explicabo magnam.
-
-                </p>
-
 
               </div>
+             
             </div>
             <div className="row">
-              <div className="col">
-                <h2>
-                  Lorem Ipsum
-
-                </h2>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi expedita temporibus a, eaque saepe at odit laborum libero explicabo magnam.
-
-                </p>
-
-
-              </div>
+              
               <div className="col">
                 <h2>
                   Lorem Ipsum
@@ -156,6 +147,8 @@ const About = () => {
             </div>
           </div>
         </div>
+
+       
         {/** Differentiator */}
 
         <ColumnScroller />
@@ -164,20 +157,27 @@ const About = () => {
         <div className="Resources">
           <div className="section">
             <div className="row">
-              <div className="col">
-                <img src="" alt =""/>
+              <div className="col-lg-5">
+                <p>
+                  _Rousources
+                </p>
 
               </div>
-              <div className="col">
+              <div className="col-lg-6">
                 <h1>
                   Web Development Trends 2024
 
                 </h1>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi doloremque distinctio, provident rem itaque blanditiis soluta, eligendi, sequi dolorum asperiores adipisci. Nobis officiis aliquid amet cupiditate possimus commodi, error aut.
+                <h2>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi doloremque distinctio, provident rem itaque blanditiis soluta, eligendi, sequi dolorum asperiores adipisci.
 
-                </p>
-                <button>Read more</button>
+                </h2>
+                <Link to="/blog">
+
+                  <button>Read more</button>
+
+                </Link>
+
 
               </div>
             </div>
