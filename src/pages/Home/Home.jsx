@@ -1,10 +1,9 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.css';
-import Accordion from "../../components/specific/Accordion.js";
+import Accordion from "../../components/specific/Accordion.jsx";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar,  faRocket } from "@fortawesome/free-solid-svg-icons";
-
+import { faStar, faRocket } from "@fortawesome/free-solid-svg-icons";
 import Test1 from '../../assets/images/test1.jpg';
 import Test2 from '../../assets/images/test2.jpg';
 import Test3 from '../../assets/images/test3.jpg';
@@ -12,8 +11,8 @@ import Test4 from '../../assets/images/test4.jpg';
 import Footer from "../../components/layout/Footer.jsx";
 import Image from '../../assets/images/Image.jpg';
 import '../../pages/Home/Home.scss';
-import ServiceSection from "../../components/specific/Service.js";
-import AuthorInfo from "../../components/specific/AuthorInfo";
+import ServiceSection from "../../components/specific/Service.jsx";
+import AuthorInfo from "../../components/specific/AuthorInfo.jsx";
 import Scroller from "../../components/specific/Scroller.jsx";
 
 const Home = () => {
@@ -110,12 +109,12 @@ const Home = () => {
         </div>
 
         {/** Services */}
-        
-        
-        <ServiceSection/>
 
-       
-        <Scroller/>
+        <ServiceSection />
+
+
+        {/** Results  */}
+        <Scroller />
 
         {/** Resources */}
         <div className="Resources">
@@ -162,9 +161,6 @@ const Home = () => {
               </div>
             </div>
           </div>
-
-
-
         </div>
         {/** Questions */}
         <div className="Questions">
@@ -177,8 +173,6 @@ const Home = () => {
               <Accordion />
             </div>
           </div>
-
-
         </div>
       </div>
       {/** Footer */}
