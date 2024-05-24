@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import '../../pages/Home/Home.scss';
-import test1 from '../../assets/images/Design.JPG';
-import test2 from '../../assets/images/Branding.JPG';
-import test3 from '../../assets/images/SEO.jpg';
-import test4 from '../../assets/images/uxuis.JPG';
+import Design_img from '../../assets/images/Design.JPG';
+import Branding_img from '../../assets/images/brand_identity.png';
+import SEO_img from '../../assets/images/search.png';
+import UXUI_img from '../../assets/images/user_experience.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 
 // Sample service data
 const services = [
-  { id: 1, name: 'Web Design', image: test1 },
-  { id: 2, name: 'Development', image: test2 },
-  { id: 3, name: 'SEO', image: test3 },
-  { id: 4, name: 'Branding', image: test4 },
+  { id: 1, name: 'Brand and Identity Design', image: Branding_img },
+  { id: 2, name: 'Web Design & Development', image: Design_img },
+  { id: 3, name: 'User Experience & Interface Design', image: UXUI_img },
+  { id: 4, name: 'Search Engine Optimization SEOs', image: SEO_img },
   // Add more services as needed
 ];
 
@@ -24,13 +24,13 @@ const ServiceSection = () => {
   };
 
   return (
-    <div className="service-section">
+    <div className="service-section" id="service">
 
       <div className="row">
         <div className="col">
 
           <div className="service-image">
-            <img src={currentImage} alt="Service" />
+            <img src={currentImage} alt="Service_image" />
           </div>
         </div>
         <div className="col">
@@ -41,7 +41,6 @@ const ServiceSection = () => {
               {services.map(service => (
 
                 <li key={service.id} onMouseEnter={() => handleMouseEnter(service.image)}>
-                  {/*<img src={service.image} alt={service.name} className="service-thumbnail" />*/}
                   <span><FontAwesomeIcon className="check" icon={faCheckCircle} /></span>
 
                   {service.name}

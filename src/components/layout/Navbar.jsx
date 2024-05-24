@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/images/Logo-black.jpg";
 import '@fortawesome/fontawesome-free/css/all.css';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRocket } from "@fortawesome/free-solid-svg-icons";
 
@@ -39,7 +38,9 @@ const Navbar = () => {
                             </li>
                         </ul>
                         <form className="d-flex">
-                            <button className="btn-primary"><FontAwesomeIcon className="rocket" icon={faRocket} />Get a proposal</button>
+                            <Link to="/get_proposal">
+                                <button className="btn-primary"><FontAwesomeIcon className="rocket" icon={faRocket} />Get a proposal</button>
+                            </Link>
                         </form>
                     </div>
                 </div>

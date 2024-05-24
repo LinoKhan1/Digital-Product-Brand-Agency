@@ -1,48 +1,101 @@
 // about.scss
 
-/* About Section */
+/* Hero */
+.About-content {
 
-.about {
-  background-color: #f6f7fa;
-  h2{
-    font-weight: 300;
-    margin-bottom: 24px;
-  }
+  .Hero {
+    background-color: #040402;
 
-}
+    .hero-text {
+      padding-top: 150px;
 
-/** Work Ethic */
-.work-ethic{
-
-  .title{
-    margin-bottom: 75px;
-  }
-  .row{
-    padding-left: 200px;
-    display: flex;
-    flex-wrap: wrap;
-    .col{
-      flex:1;
-      margin: 10px;
-      padding: 50px;
-      background-color:#f6f7fa;
-      border-radius: 50px;
-      button {
-
-        width: 100%;
-        margin-top: 24px;
-        background-color: #1A27C9;
-        padding: 18px 30px;
-        font-weight: 300;
-        border: none;
-        font-size: 1.4rem;
-        color: #fff;
+      h1 {
+        font-size: 6rem;
+        font-weight: bold;
       }
     }
   }
 }
 
 
+
+/* About Section */
+
+.about {
+  background-color: #f6f7fa;
+
+  h2 {
+    font-weight: 300;
+    margin-bottom: 24px;
+  }
+
+  button{
+    margin-top: 24px;
+    background-color: #1A27C9;
+    padding: 18px 30px;
+    font-weight: 300;
+    border: none;
+    font-size: 1.4rem;
+    color: #fff;
+  }
+}
+
+
+
+/** Core Values */
+
+.core-values-section {
+  display: flex;
+  flex-direction: row;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.title-column {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.values-column {
+  flex: 1.5;
+  overflow-y: auto; // Make the values column scrollable
+  padding: 20px;
+  background-color: #ffffff; // Background color for the values column
+  height: 80vh; // Set a fixed height for the values column
+}
+
+.values-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.value-item {
+  margin-bottom: 20px;
+}
+
+
+
+.value-item p {
+
+  font-size: 2rem;
+  
+}
+
+/* Hide the scrollbar */
+.values-column::-webkit-scrollbar {
+  width: 0; // Hide the scrollbar for WebKit browsers
+}
+
+.values-column {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
 
 
 /* Differentiator */
@@ -105,7 +158,6 @@
 
 .scroll-button {
   background-color: #1A27C9;
-  ;
   color: white;
   border: none;
   padding: 10px;
@@ -119,40 +171,91 @@
 }
 
 /** Resources */
-.Resources {
-
-  button {
-
-    width: 100%;
-    margin-top: 24px;
-    background-color: #1A27C9;
-    padding: 18px 30px;
-    font-weight: 300;
-    border: none;
-    font-size: 1.4rem;
-    color: #fff;
-  }
-
-  h2 {
-    font-weight: 300;
+.About-content{
+  .Resources {
+    background-color: #f6f7fa;
+  
+    button {
+  
+      width: 100%;
+      margin-top: 24px;
+      background-color: #1A27C9;
+      padding: 18px 30px;
+      font-weight: 300;
+      border: none;
+      font-size: 1.4rem;
+      color: #fff;
+    }
+  
+    h2 {
+      font-weight: 300;
+    }
   }
 }
 
 
+@media only screen and (max-width: 1200px) {
 
-@media only screen and (max-width: 1000px){
+  /* Core Values */
+  .values {
+    .col-lg-7 {
+      width: 100%;
+
+    }
+
+    .col-lg-5 {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
 
   /* Work Ethic */
-  .work-ethic{
-    .row{
+  .work-ethic {
+    .row {
       padding-left: 0px;
-      
+
     }
   }
 
 }
 
-@media only screen and  (max-width: 768px) {
+@media only screen and (max-width: 768px) {
+
+  /* Hero */
+  .About-content {
+    .Hero {
+      .hero-text {
+        padding-top: 100px;
+
+        h1 {
+          font-size: 5rem;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  /* Core Values */
+  .values {
+    .col-lg-7 {
+      .row {
+        .col {
+          width: 100%;
+          flex: 100%;
+        }
+      }
+    }
+
+    .col-lg-5 {
+      img {
+        display: none;
+      }
+    }
+  }
+
+
   /* Differentiator */
   .scroller-header {
     flex-direction: column;
@@ -172,15 +275,29 @@
   }
 }
 
-@media only screen and (max-width:600px){
+@media only screen and (max-width:600px) {
+
+  /* Hero */
+  .About-content {
+    .Hero {
+      .hero-text {
+        padding-top: 100px;
+
+        h1 {
+          font-size: 4rem;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
   /* Work Ethic */
-  .work-ethic{
-    .row{
-      .col{
+  .work-ethic {
+    .row {
+      .col {
         width: 100%;
         flex: 100%;
       }
     }
   }
 }
-

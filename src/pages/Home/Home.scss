@@ -51,7 +51,7 @@
 
 /* Services */
 .service-section {
-   /* display: flex;
+    /* display: flex;
     justify-content: space-between;
     align-items: flex-start;*/
     padding-left: 50px;
@@ -59,23 +59,23 @@
     padding-top: 100px;
     padding-bottom: 100px;
 
-    .row{
+    .row {
         display: flex;
         flex-wrap: wrap;
-        .col{
+
+        .col {
             flex: 1;
             margin: 10px;
         }
     }
+
     .service-image {
         flex: 1;
         padding-right: 50px;
 
         img {
             width: 100%;
-            height: auto;
-            object-fit: cover;
-            transition: opacity 0.3s ease-in-out;
+
         }
     }
 
@@ -104,8 +104,7 @@
 
                 .check {
                     position: relative;
-                    padding-right: 24px;
-                    color: #FECD3C;
+                    padding-right: 16px;
                 }
 
                 .service-thumbnail {
@@ -122,7 +121,22 @@
 
 
 /* Results */
+/*.metric-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #007bff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    margin: auto;
+}
 
+.metric-percent {
+    font-size: 16px;
+}*/
 
 /* Resources */
 .Resources {
@@ -198,6 +212,30 @@
     font-size: 1.4rem;
     font-weight: 300;
     margin-top: 24px;
+
+    ul {
+        padding-left: 0;
+        margin: 0;
+
+        li {
+            list-style-type: none;
+            margin-bottom: 16px;
+            color: #000;
+        }
+    }
+}
+
+
+.accordion-arrow {
+    margin-left: auto;
+    /* Pushes the arrow to the right */
+    font-size: 1rem;
+    transition: transform 0.2s ease;
+}
+
+.accordion-collapse.show .accordion-arrow {
+    transform: rotate(180deg);
+    /* Rotates the arrow when the accordion is open */
 }
 
 /* Media Queries */
@@ -221,10 +259,22 @@
         }
     }
 
+
+
+
+}
+
+@media only screen and (max-width: 992px) {
+
     /* Services */
-    
-
-
+    .service-section {
+        .row {
+            .col {
+                width: 100%;
+                flex: 100%;
+            }
+        }
+    }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -248,24 +298,15 @@
     }
 
     /* Services */
-    .Services {
-        .row .col-lg-6 {
-            padding-right: 50px;
-        }
-
-        img {
-            width: 100%;
-        }
-
-        .service-content {
-            width: 80%;
-            margin: auto;
-
-            ul li {
+    .service-section {
+        .row {
+            .col {
                 width: 100%;
+                flex: 100%;
             }
         }
     }
+
 
     /* Accordion */
     .accordion-container {

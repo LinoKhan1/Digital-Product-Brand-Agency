@@ -25,46 +25,40 @@ const ColumnScroller = () => {
             </div>
             <div className="scroll-wrapper row" ref={scrollContainer}>
                 <div className="scroller-row">
-                    <div className="scroller-column">
+
+
+                    <div className="scroller-column col">
                         <span><h1>1</h1></span>
-                        <h2>Extansion of Your Team</h2>
-                        <p>We act as a true extension of your team, advancing business objectives, alongside your internal team.</p>
+                        <h2>Route Cause Resolution</h2>
+                        <p>
+                            We are true problem solver who prioritize understanding the root cause of our client
+                            online challenges and providing targeted solutions.
+                        </p>
+
                     </div>
                     <div className="scroller-column col">
+
                         <span><h1>2</h1></span>
-                        <h2>Multi-Displinary Creators</h2>
+                        <h2>Data-Driven Resolution</h2>
                         <p>
-
-                            Our agency consists of experienced marketers, strategists, creatives and developers.
+                            Our strategies are informed by comprehensive data analysis, ensuring precision and effectiveness in every move.
                         </p>
-
                     </div>
                     <div className="scroller-column col">
+
                         <span><h1>3</h1></span>
-                        <h2>Multi-Displinary Creators</h2>
+                        <h2>Collaborative Partnership</h2>
                         <p>
-
-                            Our agency consists of experienced marketers, strategists, creatives and developers.
-                        </p>
-
-                    </div>
-                    <div className="scroller-column col">
-
-                        <span><h1>4</h1></span>
-                        <h2>Multi-Displinary Creators</h2>
-                        <p>
-
-                            Our agency consists of experienced marketers, strategists, creatives and developers.
+                            We foster a transparent and collaborative relationship with our clients, considering ourselves an extension of their team.
                         </p>
                     </div>
                     <div className="scroller-column col">
-
                         <span><h1>4</h1></span>
-                        <h2>Multi-Displinary Creators</h2>
+                        <h2>Innovative Edage</h2>
                         <p>
 
-                            Our agency consists of experienced marketers, strategists, creatives and developers.
-                        </p>
+                            We embrace innovation, staying ahead of industry trends and technological advancements to deliver cutting-edge digital strategies.                        </p>
+
                     </div>
 
 

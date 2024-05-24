@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Logo from '../../assets/images/Logo-black.jpg';
 import { faLinkedin, faSquareInstagram } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -18,8 +19,13 @@ const Footer = () => {
                             Let’s find out if we’re a good fit for each other.
                         </p>
                         <span>
-                            <button className="btn-primary">Get a proposal</button>
-                            <button className="btn-primary">View services</button>
+                            <Link to="/get_proposal">
+                                <button className="btn-primary">Get a proposal</button>
+                            </Link>
+                   
+                            <button onClick={()=> document.getElementById('service').scrollIntoView({behavior: 'smooth'})} className="btn-secondary"> View services</button>
+
+                   
                         </span>
 
 
@@ -32,28 +38,55 @@ const Footer = () => {
                             <div className="col">
                                 <h2>About us</h2>
                                 <ul>
-                                    <li>learn more</li>
-                                    <li>Services</li>
+
+                                    <li>
+                                        <Link className="link" to="/about">
+                                            learn more
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/#services">
+                                            Services
+                                        </Link>
+                                    </li>
                                     <li>Testimonials</li>
-                                    <li>Meet the team</li>
                                 </ul>
 
                             </div>
                             <div className="col">
                                 <h2>Resources</h2>
                                 <ul>
-                                    <li>Top Software Developer Skills to Learn in 2024</li>
-                                    <li>React 19 is changing everything</li>
-                                    <li>Surfing the SEO Tide: A review of Surfer SEOs AI Tools</li>
+                                    <li>
+                                        <Link className="link" to="/blog">
+                                            Best Practices for SEO: Boosting Your Website Visibility
+                                        </Link>
+                                    </li>
+
                                 </ul>
                             </div>
                             <div className="col">
                                 <h2>Get in touch</h2>
                                 <ul>
-                                    <li>Get a proposal</li>
-                                    <li>Contact us</li>
-                                    <li>Careers</li>
-                                    <li>Apply now</li>
+                                    <li>
+                                        <Link className="link" to="/get_proposal">
+                                            Get a proposal
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link className="link" to="/contact">
+                                            Contact us
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link className="link" to="/apply">
+                                            Careers
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link className="link" to="/apply">
+                                            Apply now
+                                        </Link>
+                                    </li>
                                 </ul>
                             </div>
 
@@ -61,8 +94,12 @@ const Footer = () => {
                             <div className="col">
                                 <div className="social">
                                     <span>
-                                        <FontAwesomeIcon className="social-icon" icon={faLinkedin}/>
-                                        <FontAwesomeIcon className="social-icon" icon={faSquareInstagram}/>
+                                        <a className="link" href="https://www.linkedin.com/company/93390939/">
+                                            <FontAwesomeIcon className="social-icon" icon={faLinkedin} />
+                                        </a>
+                                        <a className="link" href="https://www.instagram.com/linokhan_com/">
+                                            <FontAwesomeIcon className="social-icon" icon={faSquareInstagram} />
+                                        </a>
                                     </span>
                                 </div>
 

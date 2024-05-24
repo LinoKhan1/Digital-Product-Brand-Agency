@@ -36,6 +36,8 @@
     background-color: #040402;
     color: #fff;
 
+    
+
     /* Contact */
     .contact {
         position: relative;
@@ -63,7 +65,13 @@
             list-style-type: none;
             padding-bottom: 8px;
             color: #fff;
+            text-decoration: none;
 
+        }
+
+        .link{
+            text-decoration: none;
+            color:#fff;
         }
 
         .social {
@@ -119,9 +127,8 @@
 
         .footer-content {
             .social {
-                h2 {
-                    text-align: left;
-                }
+                text-align: left;
+                
             }
         }
     }
@@ -215,9 +222,9 @@
                     text-align: center;
 
                     .social{
-                        h2{
-                            text-align: center;
-                        }
+
+                        text-align: center;
+                        
                     }
                 }
                 

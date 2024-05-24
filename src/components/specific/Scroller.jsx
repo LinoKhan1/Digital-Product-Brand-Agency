@@ -16,7 +16,7 @@ const Scroller = () => {
         <div className="scroller-container">
             <div className="scroller-header">
 
-                <h1>Over the past 5 years, we have delivered measurable results for 113+ businesses.</h1>
+                <h1>Over the past years, we have delivered measurable results for various businesses.</h1>
 
                 <div className="scroller-buttons">
                     <button className="scroll-button" onClick={scrollLeft}>‹</button>
@@ -26,42 +26,32 @@ const Scroller = () => {
             <div className="scroll-wrapper row" ref={scrollContainer}>
                 <div className="scroller-row">
                     <div className="scroller-column">
-                        <h1>26.3</h1>
-                        <p>ROAS</p>
-                        <p>We act as a true extension of your team, advancing business objectives, alongside your internal team.</p>
-                    </div>
-                    <div className="scroller-column col">
-                        <h1>502%</h1>
+                        <h1>75%</h1>
                         <p>ROI</p>
-                        <p>
-                            Our agency consists of experienced marketers, strategists, creatives and developers.
-                        </p>
+                        <p>We track and optimize ROI to ensure that our clients are achieving maximum returns from their digital investments.</p>
                     </div>
                     <div className="scroller-column col">
-                        <h1>25%</h1>
-                        <p>AVR</p>
-                        <p>
-                            Our agency consists of experienced marketers, strategists, creatives and developers.
-                        </p>
-                    </div>
-                    <div className="scroller-column col">
-
-                        <h1>27%</h1>
+                        <h1>30%</h1>
                         <p>CRO</p>
-                        <p>
+                        <p>By implementing effective SEO strategies, we help our clients achieve higher visibility and attract more organic traffic to their websites.</p>
 
-                            Our agency consists of experienced marketers, strategists, creatives and developers.
-                        </p>
                     </div>
                     <div className="scroller-column col">
+                        <h1>50%</h1>
+                        <p>Brand Visibility Growth</p>
+                        <p>Through strategic branding initiatives, we elevate our clients online presence and strengthen their brand identity to reach a wider audience.</p>
 
-                        <span><h1>4</h1></span>
-                        <h2>Multi-Displinary Creators</h2>
-                        <p>
-
-                            Our agency consists of experienced marketers, strategists, creatives and developers.
-                        </p>
                     </div>
+                    <div className="scroller-column col">
+                        <h1>30%</h1>
+                        {/**<div className="metric-circle">
+                            <span className="metric-percent">30%</span>
+                            </div>*/}
+                        <p>SEO</p>
+                        <p>By implementing effective SEO strategies, we help our clients achieve higher visibility and attract more organic traffic to their websites.</p>
+
+                    </div>
+
 
 
                 </div>
