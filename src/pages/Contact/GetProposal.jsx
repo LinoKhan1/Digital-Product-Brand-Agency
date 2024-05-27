@@ -1,11 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import Logo from '../../assets/images/Logo-white.JPG';
 import '../Contact/contact.scss';
 import { Link } from "react-router-dom";
+import { useRef } from "react";
+import emailjs from '@emailjs/browser';
 
 const Proposal = () => {
-    return (
+    const [fileError, setFileError] = useState(null);
 
+
+    const handleFileChange = (e) => {
+        const file = e.target.files[0];
+        if (file && file.size > 10 * 1024 * 1024) {
+            setFileError('File size must be less than 10MB');
+        } else {
+            setFileError(null);
+        }
+    };
+
+    const form = useRef();
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm('service_ni8hifm', 'template_gkzkq4u', form.current, 'xBUmFOBzOS0lwWZLY')
+            .then((result) => {
+                console.log(result.text);
+                console.log("message sent")
+                alert("Your message has been sent!")
+            }, (error) => {
+                console.log(error.text);
+            });
+
+    }
+
+    return (
         <>
             <div className="Contact-content">
                 <div className="main contact-form">
@@ -16,12 +44,11 @@ const Proposal = () => {
                             <p>
                                 We will be in touch to book a discovery call shortly after you submit the form below 😃.
                             </p>
-                            <form action="">
+                            <form ref={form} onSubmit={sendEmail}>
                                 <div className="row">
                                     <div className="col">
-                                        <label htmlFor="name">First name</label>
-                                        <input type="text" id="name" name="name" placeholder="John" />
-
+                                        <label htmlFor="user_name">First name</label>
+                                        <input type="text" id="user_name" name="user_name" placeholder="John" />
                                     </div>
                                     <div className="col">
                                         <label htmlFor="lastName">Last name</label>
@@ -31,8 +58,8 @@ const Proposal = () => {
 
                                 <div className="row">
                                     <div className="col">
-                                        <label htmlFor="email">Email address</label>
-                                        <input type="email" id="email" name="email" placeholder="johnsmith@gmail.com" />
+                                        <label htmlFor="user_email">Email address</label>
+                                        <input type="email" id="user_email" name="user_email" placeholder="johnsmith@gmail.com" />
 
                                     </div>
                                     <div className="col">
@@ -42,22 +69,32 @@ const Proposal = () => {
                                 </div>
                                 <div className="row">
                                     <div className="col">
-                                        <label htmlFor="company">Compay name</label>
+                                        <label htmlFor="company">Company name</label>
                                         <input type="text" id="company" name="company" placeholder="Helix Consulting LLC" />
 
                                     </div>
                                     <div className="col">
-                                        <label htmlFor="webiste">Webiste url (if applicable)</label>
-                                        <input type="text" id="website" name="webiste" placeholder="helixconsulting.com" />
+                                        <label htmlFor="website">Website url (if applicable)</label>
+                                        <input type="text" id="website" name="website" placeholder="helixconsulting.com" />
                                     </div>
 
                                 </div>
                                 <div className="row">
-                                    <label>Upload project file (optional)</label>
-                                    <span><input type="button" value="Upload" /> Max file size 10MB</span>
+                                    <label htmlFor="projectFile">Upload project file (optional)</label>
+                                    <span>
+                                        <input
+                                            type="file"
+                                            id="projectFile"
+                                            name="projectFile"
+                                            accept=".pdf"
+                                            onChange={handleFileChange}
+                                        />
+                                        Max file size 10MB
+                                    </span>
+                                    {fileError && <p className="file-error">{fileError}</p>}
                                     <p>Project Summary</p>
                                     <p>If you already uploaded a file containing all project information, you can type N/A below unless you want to add anything else.</p>
-                                    <textarea name="" id="" placeholder="i.e. page count, functionality, design preferences, timeline, etc..."></textarea>
+                                    <textarea name="message" id="message" placeholder="i.e. page count, functionality, design preferences, timeline, etc..."></textarea>
                                     <input type="submit" value="Submit request" />
                                 </div>
                             </form>
@@ -66,7 +103,7 @@ const Proposal = () => {
                 </div>
             </div>
         </>
-    )
+    );
 };
 
 export default Proposal;

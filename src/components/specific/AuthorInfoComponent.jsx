@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-const AuthorInfo = ({ name, imageSrc }) => {
+
+const AuthorInfoComponent = ({ name, imageSrc }) => {
     return (
+        /** Author Info Component */
         <div className="author-info">
             <span className="author-span">
-                <img className="author-image" src={imageSrc} alt={`${name}'s portrait`} />
+                <img className="author-image" src={imageSrc} alt={`Portrait of ${name}`} />
                 <h2 className="author-name">{name}</h2>
             </span>
         </div>
@@ -16,4 +18,4 @@ AuthorInfo.propTypes = {
     imageSrc: PropTypes.string.isRequired,
 };
 
-export default AuthorInfo;
+export default AuthorInfoComponent;

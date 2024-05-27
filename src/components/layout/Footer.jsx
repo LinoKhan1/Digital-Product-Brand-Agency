@@ -1,140 +1,81 @@
 import React from "react";
 import { Link } from "react-router-dom";
+// Images
 import Logo from '../../assets/images/Logo-black.jpg';
+// Fontawesome Icons
 import { faLinkedin, faSquareInstagram } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Footer = () => {
-
     return (
-        <div className="footer">
-            <div className="main">
-                <div className="section">
-                    {/** Contact Section */}
+        /** Footer */
+        <footer className="footer">
+            <div className="footer-container">
+                <div className="footer-section">
+                    {/** Footer Contact */}
                     <div className="contact">
-
                         <img src={Logo} alt="logo-image" />
-                        <h1>As you partner, we treat your website like it is our own</h1>
-                        <p>
-                            Let’s find out if we’re a good fit for each other.
-                        </p>
-                        <span>
-                            <Link to="/get_proposal">
-                                <button className="btn-primary">Get a proposal</button>
-                            </Link>
-                   
-                            <button onClick={()=> document.getElementById('service').scrollIntoView({behavior: 'smooth'})} className="btn-secondary"> View services</button>
-
-                   
-                        </span>
-
-
-
+                        <h1>As your partner, we treat your website like it's our own.</h1>
+                        <p>Let’s find out if we’re a good fit for each other.</p>
+                        <div className="cta-buttons">
+                            <Link to="/get_proposal" className="btn-primary">Get a proposal</Link>
+                            <button onClick={() => document.getElementById('service').scrollIntoView({ behavior: 'smooth' })} className="btn-secondary">View services</button>
+                        </div>
                     </div>
-                    {/** Footer content */}
+                    {/** Footer Content */}
                     <div className="footer-content">
-
-                        <div className="row">
-                            <div className="col">
+                        <div className="footer-links">
+                            <div className="footer-column">
                                 <h2>About us</h2>
                                 <ul>
-
-                                    <li>
-                                        <Link className="link" to="/about">
-                                            learn more
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link to="/#services">
-                                            Services
-                                        </Link>
-                                    </li>
+                                    <li><Link to="/about">Learn more</Link></li>
+                                    <li><Link to="/#services">Services</Link></li>
                                     <li>Testimonials</li>
                                 </ul>
-
                             </div>
-                            <div className="col">
+                            <div className="footer-column">
                                 <h2>Resources</h2>
                                 <ul>
-                                    <li>
-                                        <Link className="link" to="/blog">
-                                            Best Practices for SEO: Boosting Your Website Visibility
-                                        </Link>
-                                    </li>
-
+                                    <li><Link to="/blog">Best Practices for SEO: Boosting Your Website Visibility</Link></li>
                                 </ul>
                             </div>
-                            <div className="col">
+                            <div className="footer-column">
                                 <h2>Get in touch</h2>
                                 <ul>
-                                    <li>
-                                        <Link className="link" to="/get_proposal">
-                                            Get a proposal
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link className="link" to="/contact">
-                                            Contact us
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link className="link" to="/apply">
-                                            Careers
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link className="link" to="/apply">
-                                            Apply now
-                                        </Link>
-                                    </li>
+                                    <li><Link to="/get_proposal">Get a proposal</Link></li>
+                                    <li><Link to="/contact">Contact us</Link></li>
+                                    <li><Link to="/apply">Careers</Link></li>
+                                    <li><Link to="/apply">Apply now</Link></li>
                                 </ul>
                             </div>
-
-
-                            <div className="col">
+                            <div className="footer-column">
                                 <div className="social">
-                                    <span>
-                                        <a className="link" href="https://www.linkedin.com/company/93390939/">
-                                            <FontAwesomeIcon className="social-icon" icon={faLinkedin} />
-                                        </a>
-                                        <a className="link" href="https://www.instagram.com/linokhan_com/">
-                                            <FontAwesomeIcon className="social-icon" icon={faSquareInstagram} />
-                                        </a>
-                                    </span>
+                                    <a href="https://www.linkedin.com/company/93390939/" className="social-link" rel="noopener noreferrer" target="_blank">
+                                        <FontAwesomeIcon className="social-icon" icon={faLinkedin} />
+                                    </a>
+                                    <a href="https://www.instagram.com/linokhan_com/" className="social-link" rel="noopener noreferrer" target="_blank">
+                                        <FontAwesomeIcon className="social-icon" icon={faSquareInstagram} />
+                                    </a>
                                 </div>
-
                             </div>
                         </div>
-
-
-
                     </div>
                 </div>
                 {/** Copyright */}
-                <div className="copyright">
-
-
-                    <div className="row">
-                        <div className="col">
-                            <p>
-                                Copyright 2024, Linokhan All Righs Reserved
-                            </p>
-                        </div>
-                        <div className="col">
-                            <p>
-                                Privacy policy
-                            </p>
-                        </div>
-                        <div className="col">
-                            <p>
-                                Cape Town, Western Cape, South Africa
-                            </p>
-                        </div>
+                <div className="footer-bottom">
+                    <div className="copyright">
+                        <p>Copyright 2024, Linokhan. All Rights Reserved</p>
+                    </div>
+                    <div className="privacy-policy">
+                        <p>Privacy Policy</p>
+                    </div>
+                    <div className="location">
+                        <p>Cape Town, Western Cape, South Africa</p>
                     </div>
                 </div>
             </div>
-        </div>
-
+        </footer>
     );
 }
+
 export default Footer;

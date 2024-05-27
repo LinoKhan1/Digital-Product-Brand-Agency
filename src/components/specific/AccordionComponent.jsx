@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+
+/* Style and css*/
 import '../../pages/Home/Home.scss';
 
-function Accordion() {
+function AccordionComponent() {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const handleToggle = (index) => {
@@ -66,4 +69,7 @@ function Accordion() {
     </div>
   );
 }
-export default Accordion;
+AccordionComponent.propTypes = {
+  // Define prop types if necessary
+};
+export default AccordionComponent;

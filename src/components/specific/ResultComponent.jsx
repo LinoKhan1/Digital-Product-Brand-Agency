@@ -1,7 +1,10 @@
 import React, { useRef } from 'react';
+import PropTypes from 'prop-types';
+
+/* Styles and css*/
 import '../../pages/About/about.scss';
 
-const Scroller = () => {
+const ResultComponent = () => {
     const scrollContainer = useRef(null);
 
     const scrollLeft = () => {
@@ -44,9 +47,7 @@ const Scroller = () => {
                     </div>
                     <div className="scroller-column col">
                         <h1>30%</h1>
-                        {/**<div className="metric-circle">
-                            <span className="metric-percent">30%</span>
-                            </div>*/}
+
                         <p>SEO</p>
                         <p>By implementing effective SEO strategies, we help our clients achieve higher visibility and attract more organic traffic to their websites.</p>
 
@@ -59,5 +60,8 @@ const Scroller = () => {
         </div>
     );
 };
+ResultComponent.propTypes = {
+    // Define prop types if necessary
+};
 
-export default Scroller;
+export default ResultComponent;

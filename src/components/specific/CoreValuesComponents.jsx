@@ -13,30 +13,28 @@ const coreValues = [
     // Add more core values as needed
 ];
 
-const CoreValues = () => {
+const CoreValuesComponent = () => {
     return (
-        <div className="core-values-section">
-            <div className="section">
-
+        <section className="core-values-section">
+            <div className="container">
                 <div className="row">
-                    <div className="col title-column">
-                        <h1>Our Culture, Values, and Beliefs</h1>
-                    </div>
-                    <div className="col values-column">
-                        <div className="values-list">
-                            {coreValues.map((value, index) => (
-                                <div key={index} className="value-item">
-                                    <h2>{value.title}</h2>
-                                    <p>{value.description}</p>
-                                </div>
-                            ))}
-                        </div>
+                    <div className="col-md-12">
+                        <h1 className="core-values-heading">Our Culture, Values, and Beliefs</h1>
                     </div>
                 </div>
+                <div className="row">
+                    {coreValues.map((value, index) => (
+                        <div key={index} className="col-md-6">
+                            <div className="core-value">
+                                <h2>{value.title}</h2>
+                                <p>{value.description}</p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
             </div>
-
-        </div>
+        </section>
     );
 };
 
-export default CoreValues;
+export default CoreValuesComponent;

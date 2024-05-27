@@ -1,7 +1,7 @@
-/* Home.module.css */
+/* Home.css */
 
 /* Hero Section */
-.main .Hero {
+.main .hero {
     background-color: #040402;
     color: #fff;
 
@@ -21,7 +21,7 @@
 }
 
 /* Testimonial */
-.Testimonial {
+.testimonial {
 
     .row {
         display: flex;
@@ -120,26 +120,9 @@
 }
 
 
-/* Results */
-/*.metric-circle {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: #007bff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-weight: bold;
-    margin: auto;
-}
-
-.metric-percent {
-    font-size: 16px;
-}*/
 
 /* Resources */
-.Resources {
+.resources {
 
 
     .row {
@@ -182,7 +165,7 @@
 }
 
 /* Questions Asked */
-.Questions {
+.questions {
     background-color: #f6f7fa;
 
 }
@@ -241,12 +224,11 @@
 /* Media Queries */
 
 
-/* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (max-width: 1200px) {
 
     /* Result, Resources*/
-    .Result,
-    .Resources {
+    .result,
+    .resources {
         .section {
             .row {
                 margin: auto;
@@ -277,13 +259,12 @@
     }
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 768px) {
 
     /* Testimonial */
-    .Testimonial,
-    .Result,
-    .Resources {
+    .testimonial,
+    .result,
+    .resources {
         .section {
             .row {
 
@@ -318,13 +299,12 @@
 
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 600px) {
 
     /* Testimonial */
-    .Testimonial,
-    .Result,
-    .Resources {
+    .testimonial,
+    .result,
+    .resources {
         .section {
             .row {
 
@@ -337,7 +317,7 @@
     }
 
     /* Services */
-    .Services {
+    .services {
         img {
             width: 100%;
         }
@@ -362,13 +342,12 @@
 
 }
 
-/* Extra small devices (phones, 600ox and down) */
 @media only screen and (max-width: 600px) {
 
     /* Testimonial */
-    .Testimonial,
-    .Result,
-    .Resources {
+    .testimonial,
+    .result,
+    .resources {
         .section {
             .row {
 
@@ -381,7 +360,7 @@
     }
 
     /* Services */
-    .Services {
+    .services {
         img {
             width: 100%;
         }

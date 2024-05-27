@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import '../../pages/About/about.scss';
 
-const ColumnScroller = () => {
+const DifferentiatorComponent = () => {
     const scrollContainer = useRef(null);
 
     const scrollLeft = () => {
@@ -68,4 +68,4 @@ const ColumnScroller = () => {
     );
 };
 
-export default ColumnScroller;
+export default DifferentiatorComponent;
