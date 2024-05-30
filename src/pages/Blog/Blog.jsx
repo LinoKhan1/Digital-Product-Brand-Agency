@@ -1,26 +1,32 @@
+/* Raect */
 import React from "react";
+
+/* Styles and CSS */
 import '../Blog/Blog.scss';
 import '../Home/Home.scss';
+
+/* Components */
 import Footer from '../../components/layout/Footer.jsx';
 
 const Blog = () => {
   return (
-    <div className="Blog">
+    /** Blog Page */
+    <div className="blog-content">
       <div className="main">
-        {/** Hero */}
-        <div className="Hero">
-          <div className="section">
+        {/** Hero Section */}
+        <div className="hero">
+          <section className="section">
             <div className="hero-text">
               <h1 className="display-1">
                 Best Practices for <em>SEO:</em>  Boosting Your Website Visibility
               </h1>
             </div>
 
-          </div>
+          </section>
         </div>
         {/** Article */}
         <div className="article">
-          <div className="section">
+          <section className="section">
 
             <div className="article-intro">
               <p>
@@ -152,7 +158,7 @@ const Blog = () => {
 
             </div>
 
-          </div>
+          </section>
         </div>
       </div>
       {/** Footer */}

@@ -13,7 +13,7 @@ const AuthorInfoComponent = ({ name, imageSrc }) => {
     );
 };
 
-AuthorInfo.propTypes = {
+AuthorInfoComponent.propTypes = {
     name: PropTypes.string.isRequired,
     imageSrc: PropTypes.string.isRequired,
 };

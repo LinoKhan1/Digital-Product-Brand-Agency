@@ -17,12 +17,11 @@ const Navbar = () => {
         <>
             <nav className="navbar navbar-expand-lg">
                 <div className="container-fluid">
-                    <a className="navbar-brand" href="#"><Link to="/"><img src={Logo} alt="logo-image" /></Link>
-                    </a>
-                    <button className="navbar-toggler" type="button" onClick={toggleNav}>
+                    <Link className="navbar-brand" to="/"><img src={Logo} alt="logo-image" /></Link>
+                    <button className="navbar-toggler" type="button" onClick={toggleNav} aria-label="Toggle navigation" >
                         <span className="navbar-toggler-icon text-white"></span>
                     </button>
-                    <div className={`collapse navbar-collapse ${isNavOpen ? 'show' : ''}`} id="navbarSupportedContent">
+                    <div className={`collapse navbar-collapse ${isNavOpen ? 'show' : ''}`} id="navbarSupportedContent" data-testid="navbar-supported-content">
                         <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                             <li className="nav-item">
                                 <Link className="nav-link text-white" aria-current="page" to="/" onClick={toggleNav}>Home</Link>

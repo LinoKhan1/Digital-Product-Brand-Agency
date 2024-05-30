@@ -144,6 +144,7 @@ const Home = () => {
           </div>
         </div>
 
+
         {/* Questions Section */}
         <div className="questions">
           <div className="section">
@@ -156,6 +157,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+
 
       {/* Footer */}
       <Footer />

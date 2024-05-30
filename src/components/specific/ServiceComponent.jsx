@@ -11,6 +11,13 @@ import UXUIImage from '../../assets/images/user_experience.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 
+const services = [
+  { id: 1, name: 'Design', image: DesignImage },
+  { id: 2, name: 'Branding', image: BrandingImage },
+  { id: 3, name: 'SEO', image: SEOImage },
+  { id: 4, name: 'UX/UI', image: UXUIImage },
+];
+
 const ServiceComponent = () => {
   const [currentImage, setCurrentImage] = useState(services[0].image);
 
@@ -28,8 +35,8 @@ const ServiceComponent = () => {
           </div>
         </div>
         <div className="col">
-          <div className="service-list">
-            <h2>Everything your site needs for success</h2>
+          <div className="service-list"data-testid="service-list">
+            <h1>Everything your site needs for success</h1>
             <ul>
               {services.map(service => (
                 <li key={service.id} onMouseEnter={() => handleMouseEnter(service.image)}>
@@ -45,7 +52,7 @@ const ServiceComponent = () => {
   );
 };
 
-ServiceSection.propTypes = {
+ServiceComponent.propTypes = {
   services: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,

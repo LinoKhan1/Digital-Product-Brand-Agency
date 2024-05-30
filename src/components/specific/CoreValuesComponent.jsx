@@ -1,6 +1,10 @@
+/* React */
 import React from 'react';
+
+/* Styles and CSS*/
 import '../../pages/About/about.scss';
 
+/* Core Values Data */
 const coreValues = [
     { title: 'Integrity', description: 'We uphold the highest standards of integrity in all of our actions.' },
     { title: 'Customer Commitment', description: 'We develop relationships that make a positive difference in our clients’ lives.' },
@@ -15,25 +19,31 @@ const coreValues = [
 
 const CoreValuesComponent = () => {
     return (
-        <section className="core-values-section">
-            <div className="container">
+
+        /* Core Values Section */
+        <div className="core-values-section">
+            <section className="section">
+
                 <div className="row">
-                    <div className="col-md-12">
-                        <h1 className="core-values-heading">Our Culture, Values, and Beliefs</h1>
+                    {/** Title Section */}
+                    <div className="col title-column">
+                        <h1>Our Culture, Values, and Beliefs</h1>
+                    </div>
+                    {/** Values Section */}
+                    <div className="col values-column">
+                        <div className="values-list">
+                            {coreValues.map((value, index) => (
+                                <div key={index} className="value-item">
+                                    <h2>{value.title}</h2>
+                                    <p>{value.description}</p>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
-                <div className="row">
-                    {coreValues.map((value, index) => (
-                        <div key={index} className="col-md-6">
-                            <div className="core-value">
-                                <h2>{value.title}</h2>
-                                <p>{value.description}</p>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </div>
-        </section>
+            </section>
+
+        </div>
     );
 };
 

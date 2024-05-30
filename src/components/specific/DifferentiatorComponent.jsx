@@ -19,8 +19,10 @@ const DifferentiatorComponent = () => {
                     _Our Differentiators
                 </p>
                 <div className="scroller-buttons">
-                    <button className="scroll-button" onClick={scrollLeft}>‹</button>
-                    <button className="scroll-button" onClick={scrollRight}>›</button>
+                <div className="scroller-buttons">
+                    <button className="scroll-button" onClick={scrollLeft} data-testid="scroll-left-button">‹</button>
+                    <button className="scroll-button" onClick={scrollRight} data-testid="scroll-right-button">›</button>
+                </div>
                 </div>
             </div>
             <div className="scroll-wrapper row" ref={scrollContainer}>

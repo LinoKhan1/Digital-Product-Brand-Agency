@@ -17,6 +17,7 @@ const ResultComponent = () => {
 
     return (
         <div className="scroller-container">
+            {/** Sroller Header Section */}
             <div className="scroller-header">
 
                 <h1>Over the past years, we have delivered measurable results for various businesses.</h1>
@@ -26,6 +27,7 @@ const ResultComponent = () => {
                     <button className="scroll-button" onClick={scrollRight}>›</button>
                 </div>
             </div>
+            {/** Scroller Wrapper Section */}
             <div className="scroll-wrapper row" ref={scrollContainer}>
                 <div className="scroller-row">
                     <div className="scroller-column">

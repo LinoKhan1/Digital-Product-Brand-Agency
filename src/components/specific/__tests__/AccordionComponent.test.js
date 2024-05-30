@@ -1,16 +1,17 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
+// Testing
+import { render, screen, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom';
+// Commponents
+import AccordionComponent from '../AccordionComponent';
 
-/* Style and css*/
-import '../../pages/Home/Home.scss';
-
-const AccordionComponent = () => {
-  const [activeIndex, setActiveIndex] = useState(null);
-
-  const handleToggle = (index) => {
-    setActiveIndex(activeIndex === index ? null : index);
-  };
-
+/**
+ * Test suite for the AccordionComponent.
+ */
+describe('AccordionComponent', () => {
+  /**
+   * Data for testing accordion items.
+   */
   const accordionData = [
     { id: 0, question: 'What types of clients and industries do you serve?', answer: 'We partner with clients of all shapes and sizes - from startups and small businesses to large enterprises and nonprofits. Our expertise spans various sectors including Technology, Financial Services, Professional Services, Healthcare, Real Estate, and E-commerce. We tailor our solutions to meet the unique needs of each client, regardless of their size or industry.' },
     { id: 1, question: 'Which platforms do you use for web design and development?', answer: 'Our web design and development stack includes a variety of powerful platforms and technologies to meet diverse client needs. We utilize ReactJS for dynamic and responsive front-end development, ASP.NET with C# for robust and scalable web applications, and Java Spring Web for enterprise-level backend solutions. For content management systems (CMS), we leverage popular platforms such as WordPress and WebFlow to create flexible and easy-to-manage websites.' },
@@ -40,38 +41,72 @@ const AccordionComponent = () => {
     { id: 4, question: 'What are the benefits of using a responsive web design approach?', answer: 'Benefits of responsive web design include improved user experience across devices, better SEO performance (due to Google\'s preference for mobile-friendly websites), easier maintenance (as you only need to update content once), and cost-effectiveness (compared to maintaining separate mobile and desktop versions).' },
   ];
 
-  return (
-    <div id="accordion" className="accordion-container">
-      {accordionData.map((item) => (
-        <div className="accordion-item" key={item.id}>
-          <h3 className="accordion-header" id={`heading${item.id}`}>
-            <button
-              className="accordion-button"
-              type="button"
-              onClick={() => handleToggle(item.id)}
-              aria-expanded={activeIndex === item.id}
-              aria-controls={`collapse${item.id}`}
-            >
-              {item.question}
-              <span className="accordion-arrow">{activeIndex === item.id ? '▼' : '▶'}</span>
-            </button>
-          </h3>
-          {activeIndex === item.id && (
-            <div
-              id={`collapse${item.id}`}
-              className="accordion-collapse collapse show"
-              aria-labelledby={`heading${item.id}`}
-              data-bs-parent="#accordion"
-            >
-              <div className="accordion-body" dangerouslySetInnerHTML={{ __html: item.answer }} />
-            </div>
-          )}
-        </div>
-      ))}
-    </div>
-  );
-}
-AccordionComponent.propTypes = {
-  // Define prop types if necessary
-};
-export default AccordionComponent;
+  /**
+   * Test to check if all accordion items are rendered.
+   */
+  test('renders all accordion items', () => {
+    render(<AccordionComponent />);
+    accordionData.forEach(item => {
+      expect(screen.getByText(item.question)).toBeInTheDocument();
+    });
+  });
+
+  /**
+   * Test to check if the accordion item toggles on click.
+   */
+  test('toggles accordion item on click', () => {
+    render(<AccordionComponent />);
+    const firstQuestionButton = screen.getByText(accordionData[0].question);
+    const firstAnswer = accordionData[0].answer;
+
+    // Initially, the answer should not be visible
+    expect(screen.queryByText(firstAnswer)).not.toBeInTheDocument();
+
+    // Click to expand the first item
+    fireEvent.click(firstQuestionButton);
+    expect(screen.getByText(firstAnswer)).toBeVisible();
+
+    // Click again to collapse the first item
+    fireEvent.click(firstQuestionButton);
+    expect(screen.queryByText(firstAnswer)).not.toBeInTheDocument();
+  });
+
+  /**
+   * Test to check if only one accordion item is expanded at a time.
+   */
+  test('only one accordion item is expanded at a time', () => {
+    render(<AccordionComponent />);
+    const firstQuestionButton = screen.getByText(accordionData[0].question);
+    const secondQuestionButton = screen.getByText(accordionData[1].question);
+    const firstAnswer = accordionData[0].answer;
+    const secondAnswer = accordionData[1].answer;
+
+    // Expand the first item
+    fireEvent.click(firstQuestionButton);
+    expect(screen.getByText(firstAnswer)).toBeVisible();
+
+    // Expand the second item, the first item should collapse
+    fireEvent.click(secondQuestionButton);
+    expect(screen.queryByText(firstAnswer)).not.toBeInTheDocument();
+    expect(screen.getByText(secondAnswer)).toBeVisible();
+  });
+
+  /**
+   * Test to check if accordion buttons have correct aria-expanded attribute.
+   */
+  test('accordion buttons have correct aria-expanded attribute', () => {
+    render(<AccordionComponent />);
+    const firstQuestionButton = screen.getByText(accordionData[0].question);
+
+    // Initially, aria-expanded should be false
+    expect(firstQuestionButton.closest('button')).toHaveAttribute('aria-expanded', 'false');
+
+    // Click to expand
+    fireEvent.click(firstQuestionButton);
+    expect(firstQuestionButton.closest('button')).toHaveAttribute('aria-expanded', 'true');
+
+    // Click again to collapse
+    fireEvent.click(firstQuestionButton);
+    expect(firstQuestionButton.closest('button')).toHaveAttribute('aria-expanded', 'false');
+  });
+});
