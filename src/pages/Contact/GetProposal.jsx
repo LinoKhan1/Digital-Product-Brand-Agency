@@ -22,7 +22,7 @@ const Proposal = () => {
     const sendEmail = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm('service_ni8hifm', 'template_gkzkq4u', form.current, 'xBUmFOBzOS0lwWZLY')
+        emailjs.sendForm('service_725gn2g', 'template_gkzkq4u', form.current, 'kLCfazak-ocrHLbKy')
             .then((result) => {
                 console.log(result.text);
                 console.log("message sent")

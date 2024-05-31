@@ -2,12 +2,11 @@
 import React from "react";
 
 /* Testing */
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen} from "@testing-library/react";
 import '@testing-library/jest-dom';
 
 /* Routing */
-import { MemoryRouter, Router } from "react-router-dom";
-import { createMemoryHistory } from "history";
+import { MemoryRouter} from "react-router-dom";
 /* About */
 import About from "../About/About";
 

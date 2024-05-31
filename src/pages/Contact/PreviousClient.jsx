@@ -5,24 +5,18 @@ import { Link } from "react-router-dom";
 import emailjs from '@emailjs/browser';
 
 const Client = () => {
-
     const form = useRef();
-
     const sendEmail = (e) => {
         e.preventDefault();
-
-        emailjs.sendForm('service_ni8hifm', 'template_gkzkq4u', form.current, 'xBUmFOBzOS0lwWZLY')
+        emailjs.sendForm('service_725gn2g', 'template_gkzkq4u', form.current, 'kLCfazak-ocrHLbKy')
             .then((result) => {
                 console.log(result.text);
                 console.log("message sent")
                 alert("Your message has been sent!")
-
             }, (error) => {
                 console.log(error.text);
             });
     }
-
-
     return (
         <>
             <div className="Contact-content">
@@ -61,19 +55,17 @@ const Client = () => {
                                 </div>
                                 <div className="row">
                                     <div className="col">
-                                        <label htmlFor="company">Compay name</label>
-                                        <input type="text" id="company" name="company" placeholder="Helix Consulting LLC" />
+                                        <label htmlFor="company">Company name</label>
+                                        <input type="text" id="user_company" name="user_company" placeholder="Helix Consulting LLC" />
 
                                     </div>
                                     <div className="col">
-                                        <label htmlFor="webiste">Webiste url (if applicable)</label>
+                                        <label htmlFor="webiste">Webiste url</label>
                                         <input type="text" id="website" name="webiste" placeholder="helixconsulting.com" />
                                     </div>
-
                                 </div>
                                 <div className="row">
-                                    <label>Message</label>
-
+                                    <label htmlFor="message">Message</label>
                                     <textarea name="message" id="message" placeholder="Type your message here..."></textarea>
                                     <input type="submit" value="Submit inquiry" />
                                 </div>
@@ -85,5 +77,7 @@ const Client = () => {
         </>
     );
 }
-
 export default Client;
+
+
+
