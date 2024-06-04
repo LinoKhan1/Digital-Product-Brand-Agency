@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 
 /* Styles and css*/
 import '../../pages/About/about.scss';
@@ -62,8 +62,8 @@ const ResultComponent = () => {
         </div>
     );
 };
-ResultComponent.propTypes = {
+/*ResultComponent.propTypes = {
     // Define prop types if necessary
-};
+};*/
 
 export default ResultComponent;

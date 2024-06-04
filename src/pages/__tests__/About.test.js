@@ -8,7 +8,7 @@ import '@testing-library/jest-dom';
 /* Routing */
 import { MemoryRouter} from "react-router-dom";
 /* About */
-import About from "../About/About";
+import About from "../About/About.jsx";
 
 describe("About Page", () => {
 

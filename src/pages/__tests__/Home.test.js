@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import Home from '../Home/Home';
+import Home from '../Home/Home.jsx';
 
 describe('Home Component', () => {
   test('renders without crashing', () => {

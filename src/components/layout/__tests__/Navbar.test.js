@@ -2,7 +2,7 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import Navbar from '../Navbar'; // adjust the import path as necessary
+import Navbar from '../Navbar.jsx'; // adjust the import path as necessary
 
 describe('Navbar Component', () => {
     test('renders navigation links correctly', () => {

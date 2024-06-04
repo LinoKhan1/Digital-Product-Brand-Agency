@@ -3,7 +3,7 @@ import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 // Commponents
-import AccordionComponent from '../AccordionComponent';
+import AccordionComponent from '../AccordionComponent.jsx';
 
 /**
  * Test suite for the AccordionComponent.

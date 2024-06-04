@@ -2,8 +2,8 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
-import Layout from '../Layout'; // adjust the import path as necessary
-import Navbar from '../Navbar'; // adjust the import path as necessary
+import Layout from '../Layout.jsx'; // adjust the import path as necessary
+import Navbar from '../Navbar.jsx'; // adjust the import path as necessary
 
 // Mock the Navbar component
 jest.mock('../Navbar', () => () => <div>Mock Navbar</div>);

@@ -5,9 +5,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 /* Components */
-import Footer from "../../components/layout/Footer";
-import DifferentiatorComponent from "../../components/specific/DifferentiatorComponent";
-import CoreValuesComponent from "../../components/specific/CoreValuesComponent";
+import Footer from "../../components/layout/Footer.jsx";
+import DifferentiatorComponent from "../../components/specific/DifferentiatorComponent.jsx";
+import CoreValuesComponent from "../../components/specific/CoreValuesComponent.jsx";
 
 /* Styles and css */
 import '../About/about.scss';

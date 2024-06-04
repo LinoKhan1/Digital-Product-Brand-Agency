@@ -9,10 +9,10 @@ import '@testing-library/jest-dom';
 import { MemoryRouter, BrowserRouter as Router } from 'react-router-dom';
 
 /* Components */
-import Contact from '../Contact/Contact';
-import PreviousClient from '../Contact/PreviousClient';
-import SellProduct from '../Contact/SellProduct';
-import GetProposal from '../Contact/GetProposal';
+import Contact from '../Contact/Contact.jsx';
+import PreviousClient from '../Contact/PreviousClient.jsx';
+import SellProduct from '../Contact/SellProduct.jsx';
+import GetProposal from '../Contact/GetProposal.jsx';
 
 /* EmailJS */
 import emailjs from '@emailjs/browser';

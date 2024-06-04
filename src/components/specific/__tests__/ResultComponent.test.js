@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import ResultComponent from '../ResultComponent';
+import ResultComponent from '../ResultComponent.jsx';
 import { MemoryRouter } from 'react-router-dom';
 
 describe('Result Component', ()=>{

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 
 /* Style and css*/
 import '../../pages/Home/Home.scss';
@@ -71,7 +71,7 @@ const AccordionComponent = () => {
     </div>
   );
 }
-AccordionComponent.propTypes = {
+/*AccordionComponent.propTypes = {
   // Define prop types if necessary
-};
+};*/
 export default AccordionComponent;

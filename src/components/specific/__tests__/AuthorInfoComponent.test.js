@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom'; 
-import AuthorInfoComponent from '../AuthorInfoComponent';
+import AuthorInfoComponent from '../AuthorInfoComponent.jsx';
 
 describe('AuthorInfoComponent', () => {
     // Test to ensure that the AuthorInfoComponent renders the author's name and image

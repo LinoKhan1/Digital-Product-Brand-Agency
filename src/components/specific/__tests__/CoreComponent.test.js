@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import CoreValuesComponent from "../CoreValuesComponent";
+import CoreValuesComponent from "../CoreValuesComponent.jsx";
 import { MemoryRouter } from "react-router-dom";
 
 describe('Core Values Component', () => {
