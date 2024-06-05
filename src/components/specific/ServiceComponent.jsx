@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 
 // Images
 import DesignImage from '../../assets/images/Design.JPG';
@@ -57,12 +57,12 @@ const ServiceComponent = () => {
   );
 };
 
-ServiceComponent.propTypes = {
+/*ServiceComponent.propTypes = {
   services: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired
   })).isRequired
-};
+};*/
 
 export default ServiceComponent;
