@@ -39,7 +39,7 @@ const Proposal = () => {
                 <div className="main contact-form">
                     <div className="options">
                         <div className="section">
-                            <Link to="/"><img src={Logo} alt="logo-image" /></Link>
+                            <Link to="/"><img src={Logo} alt="Linokhan Logo"/></Link>
                             <h1 className="display-1">Get a proposal</h1>
                             <p>
                                 We will be in touch to book a discovery call shortly after you submit the form below 😃.

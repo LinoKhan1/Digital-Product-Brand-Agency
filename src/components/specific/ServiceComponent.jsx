@@ -36,7 +36,7 @@ const ServiceComponent = () => {
       <div className="row">
         <div className="col">
           <div className="service-image">
-            <img src={currentImage} alt="Service Image" />
+            <img src={currentImage} alt="Linokhan Service" />
           </div>
         </div>
         <div className="col">

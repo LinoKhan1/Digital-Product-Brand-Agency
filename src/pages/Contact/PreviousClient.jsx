@@ -23,7 +23,7 @@ const Client = () => {
                 <div className="main contact-form">
                     <div className="options">
                         <div className="section">
-                            <Link to="/"><img src={Logo} alt="logo-image" /></Link>
+                            <Link to="/"><img src={Logo} alt="Linokhan Logo" /></Link>
                             <h1 className="display-1">Get In Touch</h1>
                             <p>
                                 Please submit the form below. We will get back to you soon 😃.

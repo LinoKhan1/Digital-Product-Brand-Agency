@@ -9,7 +9,7 @@ const Sell = () => {
             <div className="main">
                 <div className="options">
                     <div className="section">
-                        <Link to="/"><img src={Logo} alt="logo-image" /></Link>
+                        <Link to="/"><img src={Logo} alt="Linokhan Logo" /></Link>
 
 
                         <h1 className="display-1">

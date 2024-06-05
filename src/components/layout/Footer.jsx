@@ -20,7 +20,7 @@ const Footer = () => {
                 {/** Contact Section */}
                 <div className="contact">
 
-                    <img src={Logo} alt="logo-image" />
+                    <img src={Logo} alt="Linokhan Logo" />
                     <h1>As your partner, we treat your website like it is our own</h1>
                     <p>
                         Let’s find out if we’re a good fit for each other.
