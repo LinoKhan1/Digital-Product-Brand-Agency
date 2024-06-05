@@ -2,8 +2,7 @@
 import React from 'react';
 
 /* Styles and CSS*/
-import '../../pages/About/about.scss';
-
+import './component.scss';
 /* Core Values Data */
 const coreValues = [
     { title: 'Integrity', description: 'We uphold the highest standards of integrity in all of our actions.' },

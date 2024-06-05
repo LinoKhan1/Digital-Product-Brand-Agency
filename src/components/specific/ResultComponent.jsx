@@ -2,8 +2,7 @@ import React, { useRef } from 'react';
 //import PropTypes from 'prop-types';
 
 /* Styles and css*/
-import '../../pages/About/about.scss';
-
+import './component.scss';
 const ResultComponent = () => {
     const scrollContainer = useRef(null);
 

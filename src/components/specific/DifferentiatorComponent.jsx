@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import '../../pages/About/about.scss';
+import './component.scss';
 
 const DifferentiatorComponent = () => {
     const scrollContainer = useRef(null);
