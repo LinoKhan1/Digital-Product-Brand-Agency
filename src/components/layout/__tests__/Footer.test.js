@@ -15,7 +15,7 @@ describe('Footer Component', () => {
   });
 
   test('renders logo image', () => {
-    const logoImage = screen.getByAltText('logo-image');
+    const logoImage = screen.getByAltText('Linokhan Logo');
     expect(logoImage).toBeInTheDocument();
   });
 

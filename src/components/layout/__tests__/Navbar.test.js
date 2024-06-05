@@ -33,7 +33,7 @@ describe('Navbar Component', () => {
         );
 
         // Check if the logo is rendered
-        const logo = screen.getByAltText('logo-image');
+        const logo = screen.getByAltText('Linokhan Logo');
         expect(logo).toBeInTheDocument();
         expect(logo.src).toContain('Logo-black.jpg'); // Adjust the image source check if necessary
     });
