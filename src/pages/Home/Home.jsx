@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 // Styles and CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.css';
-import '../../pages/Home/Home.scss';
+import './Home.scss';
 
 // Font Awesome Icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

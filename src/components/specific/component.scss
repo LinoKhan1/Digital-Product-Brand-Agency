@@ -1,4 +1,3 @@
-
 /* Differentiator */
 .scroller-column {
     transition: transform 0.3s ease-in-out;
@@ -76,55 +75,112 @@
 .core-values-section {
     display: flex;
     flex-direction: row;
-  }
-  
-  .row {
+}
+
+.row {
     display: flex;
     flex-wrap: wrap;
-  }
-  
-  .title-column {
+}
+
+.title-column {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
-  }
-  
-  .values-column {
+}
+
+.values-column {
     flex: 1.5;
     overflow-y: auto; // Make the values column scrollable
     padding: 20px;
     background-color: #ffffff; // Background color for the values column
     height: 80vh; // Set a fixed height for the values column
-  }
-  
-  .values-list {
+}
+
+.values-list {
     display: flex;
     flex-direction: column;
-  }
-  
-  .value-item {
+}
+
+.value-item {
     margin-bottom: 20px;
-  }
-  
-  
-  
-  .value-item p {
-  
+}
+
+
+
+.value-item p {
+
     font-size: 2rem;
-    
-  }
-  
-  /* Hide the scrollbar */
-  .values-column::-webkit-scrollbar {
+
+}
+
+/* Hide the scrollbar */
+.values-column::-webkit-scrollbar {
     width: 0; // Hide the scrollbar for WebKit browsers
-  }
-  
-  .values-column {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-  }
-  
-  
-  
+}
+
+.values-column {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+/* Accordion */
+/* Questions Asked */
+.questions {
+    background-color: #f6f7fa;
+
+}
+
+.accordion-container {
+    position: relative;
+    width: 60%;
+    margin: auto;
+}
+
+.accordion-item {
+    position: relative;
+    margin-top: 25px;
+    margin-top: 25px;
+
+    h3 button {
+        font-size: 1.4rem;
+    }
+}
+
+.accordion-header {
+    font-size: 1.4rem;
+}
+
+.accordion-body {
+    position: relative;
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin-top: 24px;
+
+    ul {
+        padding-left: 0;
+        margin: 0;
+
+        li {
+            list-style-type: none;
+            margin-bottom: 16px;
+            color: #000;
+        }
+    }
+}
+
+
+.accordion-arrow {
+    margin-left: auto;
+    /* Pushes the arrow to the right */
+    font-size: 1rem;
+    transition: transform 0.2s ease;
+}
+
+.accordion-collapse.show .accordion-arrow {
+    transform: rotate(180deg);
+    /* Rotates the arrow when the accordion is open */
+}

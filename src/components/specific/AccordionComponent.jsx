@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 //import PropTypes from 'prop-types';
 
 /* Style and css*/
-import '../../pages/Home/Home.scss';
+import './component.scss';
 
 const AccordionComponent = () => {
   const [activeIndex, setActiveIndex] = useState(null);

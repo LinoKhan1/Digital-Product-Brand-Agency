@@ -43,62 +43,6 @@
 
 
 
-/** Core Values */
-
-.core-values-section {
-  display: flex;
-  flex-direction: row;
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.title-column {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-}
-
-.values-column {
-  flex: 1.5;
-  overflow-y: auto; // Make the values column scrollable
-  padding: 20px;
-  background-color: #ffffff; // Background color for the values column
-  height: 80vh; // Set a fixed height for the values column
-}
-
-.values-list {
-  display: flex;
-  flex-direction: column;
-}
-
-.value-item {
-  margin-bottom: 20px;
-}
-
-
-
-.value-item p {
-
-  font-size: 2rem;
-  
-}
-
-/* Hide the scrollbar */
-.values-column::-webkit-scrollbar {
-  width: 0; // Hide the scrollbar for WebKit browsers
-}
-
-.values-column {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
-
-
 
 /** Resources */
 .about-content{

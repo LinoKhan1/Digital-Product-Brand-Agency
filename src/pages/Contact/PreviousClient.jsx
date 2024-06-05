@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import Logo from '../../assets/images/Logo-white.JPG';
-import '../Contact/contact.scss';
+import './contact.scss';
 import { Link } from "react-router-dom";
 import emailjs from '@emailjs/browser';
 

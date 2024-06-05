@@ -10,7 +10,7 @@ import DifferentiatorComponent from "../../components/specific/DifferentiatorCom
 import CoreValuesComponent from "../../components/specific/CoreValuesComponent.jsx";
 
 /* Styles and css */
-import '../About/about.scss';
+import './about.scss';
 
 const About = () => {
   return (

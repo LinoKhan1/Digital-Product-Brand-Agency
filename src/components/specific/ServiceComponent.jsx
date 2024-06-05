@@ -12,11 +12,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 
 const services = [
+
   { id: 1, name: 'Design', image: DesignImage },
   { id: 2, name: 'Branding', image: BrandingImage },
   { id: 3, name: 'SEO', image: SEOImage },
   { id: 4, name: 'UX/UI', image: UXUIImage },
+
 ];
+
+
+
 
 const ServiceComponent = () => {
   const [currentImage, setCurrentImage] = useState(services[0].image);
@@ -27,7 +32,7 @@ const ServiceComponent = () => {
 
   return (
     /** Service Component */
-    <section className="service-section" id="service">
+    <section className="service-section" id="service" data-testid="service-component">
       <div className="row">
         <div className="col">
           <div className="service-image">
@@ -35,7 +40,7 @@ const ServiceComponent = () => {
           </div>
         </div>
         <div className="col">
-          <div className="service-list"data-testid="service-list">
+          <div className="service-list" data-testid="service-list">
             <h1>Everything your site needs for success</h1>
             <ul>
               {services.map(service => (

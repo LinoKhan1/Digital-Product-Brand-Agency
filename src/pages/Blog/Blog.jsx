@@ -2,7 +2,7 @@
 import React from "react";
 
 /* Styles and CSS */
-import '../Blog/Blog.scss';
+import './Blog.scss';
 import '../Home/Home.scss';
 
 /* Components */
