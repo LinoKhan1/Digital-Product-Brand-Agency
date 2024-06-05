@@ -20,18 +20,48 @@ Linokhan.com is a digital product and brand agency website built with React JS. 
 - CI/CD
   
 ## Project Structure
-- src
-- public
-- .github
-- Dockerfile
-- compose.yml
-- package.json
-- package-lock.json
-- README.md
-- dockerREADME.md
-- .gitignore
-- .dockerignore
+``` sh
+.
+├── src
+│   ├── assets
+│   │   └── images
+│   ├── components
+│   │   ├── layout
+│   │   ├── ServiceComponent.jsx
+│   │   ├── CoreValuesComponent.jsx
+│   │   └── ...
+│   ├── pages
+│   │   ├── Home.jsx
+│   │   ├── Contact.jsx
+│   │   ├── Client.jsx
+│   │   └── ...
+│   ├── tests
+│   │   ├── __mocks__
+│   │   │   └── emailjs.js
+│   │   ├── components
+│   │   │   ├── CoreValuesComponent.test.js
+│   │   │   ├── ServiceComponent.test.js
+│   │   │   └── ...
+│   │   ├── pages
+│   │   │   ├── Contact.test.js
+│   │   │   └── ...
+│   │   └── setupTests.js
+│   ├── App.js
+│   ├── index.js
+│   └── ...
+├── public
+│   ├── index.html
+│   └── ...
+├── .github
+│   └── workflows
+│       └── ci.yml
+├── Dockerfile
+├── docker-compose.yml
+├── package.json
+└── README.md
 
+
+```
 ## Getting Started
 
 ### 1. Clone the Repository
