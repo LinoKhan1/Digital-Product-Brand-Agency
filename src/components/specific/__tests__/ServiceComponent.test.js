@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import ServiceComponent from '../ServiceComponent,jsx';
+import ServiceComponent from '../ServiceComponent.jsx';
 import { MemoryRouter } from "react-router-dom";
 //import design_img from '../../../assets/images/Design.JPG';
 
