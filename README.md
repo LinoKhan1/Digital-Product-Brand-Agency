@@ -21,12 +21,6 @@ Linokhan.com is a digital product and brand agency website built with React JS. 
   
 ## Project Structure
 - src
--   assets
--   components
--   pages
--   tests
--   App.js
--   index.js
 - public
 - .github
 - Dockerfile
