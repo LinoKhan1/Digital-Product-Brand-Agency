@@ -5,10 +5,10 @@ import { MemoryRouter } from "react-router-dom";
 
 describe('Service Component', () => {
     const mockServices = [
-        { name: 'Design', image: 'design_img_path' },
-        { name: 'Branding', image: 'branding_img_path' },
-        { name: 'SEO', image: 'seo_img_path' },
-        { name: 'UX/UI', image: 'ux_ui_img_path' }
+        { id: 1, name: 'Design', image: 'design_img_path' },
+        { id: 2, name: 'Branding', image: 'branding_img_path' },
+        { id: 3, name: 'SEO', image: 'seo_img_path' },
+        { id: 4, name: 'UX/UI', image: 'ux_ui_img_path' }
     ];
 
     beforeEach(() => {
@@ -23,7 +23,6 @@ describe('Service Component', () => {
         const serviceComponent = screen.getByTestId('service-component');
         expect(serviceComponent).toBeInTheDocument();
     });
-
 
     test('renders service list with correct services', () => {
         const serviceList = screen.getByTestId('service-list');
