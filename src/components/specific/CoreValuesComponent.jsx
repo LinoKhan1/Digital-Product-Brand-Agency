@@ -1,8 +1,13 @@
 /* React */
-import React from 'react';
+import React, {useEffect} from 'react';
 
 /* Styles and CSS*/
 import './component.scss';
+
+// AOS Animations
+import AOS from "aos";
+import 'aos/dist/aos.css';
+
 /* Core Values Data */
 const coreValues = [
     { title: 'Integrity', description: 'We uphold the highest standards of integrity in all of our actions.' },
@@ -17,10 +22,15 @@ const coreValues = [
 ];
 
 const CoreValuesComponent = () => {
+    useEffect(() => {
+        AOS.init();
+    }, [])
     return (
 
+
+
         /* Core Values Section */
-        <div className="core-values-section">
+        <div className="core-values-section" data-aos="fade-up">
             <section className="section">
 
                 <div className="row">

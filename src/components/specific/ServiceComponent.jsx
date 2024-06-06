@@ -1,11 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import LazyLoad from 'react-lazyload';
 //import PropTypes from 'prop-types';
 
 // Images
-import DesignImage from '../../assets/images/Design.JPG';
-import BrandingImage from '../../assets/images/brand_identity.png';
-import SEOImage from '../../assets/images/search.png';
-import UXUIImage from '../../assets/images/user_experience.png';
+import DesignImage from '../../assets/images/Design.webp';
+import BrandingImage from '../../assets/images/brand_identity.webp';
+import SEOImage from '../../assets/images/search.webp';
+import UXUIImage from '../../assets/images/user_experience.webp';
+
+// AOS Animations
+import AOS from "aos";
+import 'aos/dist/aos.css';
 
 // Font Awesome Icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -24,6 +29,10 @@ const services = [
 
 
 const ServiceComponent = () => {
+
+  useEffect(() => {
+    AOS.init();
+  }, [])
   const [currentImage, setCurrentImage] = useState(services[0].image);
 
   const handleMouseEnter = (image) => {
@@ -32,11 +41,13 @@ const ServiceComponent = () => {
 
   return (
     /** Service Component */
-    <section className="service-section" id="service" data-testid="service-component">
+    <section className="service-section" id="service" data-testid="service-component" data-aos="fade-up">
       <div className="row">
         <div className="col">
           <div className="service-image">
-            <img src={currentImage} alt="Linokhan Service" />
+            <LazyLoad height={200}>
+              <img src={currentImage} alt="Service of Linokhan" />
+            </LazyLoad>
           </div>
         </div>
         <div className="col">

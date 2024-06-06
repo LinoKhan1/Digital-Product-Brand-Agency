@@ -1,7 +1,16 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import './component.scss';
 
+// AOS Animations
+import AOS from "aos";
+import 'aos/dist/aos.css';
+
 const DifferentiatorComponent = () => {
+
+    useEffect(() => {
+        AOS.init();
+    }, [])
+    
     const scrollContainer = useRef(null);
 
     const scrollLeft = () => {
@@ -13,16 +22,18 @@ const DifferentiatorComponent = () => {
     };
 
     return (
-        <div className="scroller-container">
+
+
+        <div className="scroller-container" data-aos="fade-up">
             <div className="scroller-header">
                 <p>
                     _Our Differentiators
                 </p>
                 <div className="scroller-buttons">
-                <div className="scroller-buttons">
-                    <button className="scroll-button" onClick={scrollLeft} data-testid="scroll-left-button">‹</button>
-                    <button className="scroll-button" onClick={scrollRight} data-testid="scroll-right-button">›</button>
-                </div>
+                    <div className="scroller-buttons">
+                        <button className="scroll-button" onClick={scrollLeft} data-testid="scroll-left-button">‹</button>
+                        <button className="scroll-button" onClick={scrollRight} data-testid="scroll-right-button">›</button>
+                    </div>
                 </div>
             </div>
             <div className="scroll-wrapper row" ref={scrollContainer}>

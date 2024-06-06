@@ -1,17 +1,36 @@
 /* Raect */
-import React from "react";
+import React, {useEffect} from "react";
+
+/* React Helmet */
+import { Helmet } from "react-helmet";
 
 /* Styles and CSS */
 import './Blog.scss';
 import '../Home/Home.scss';
 
+// AOS Animations
+import AOS from "aos";
+import 'aos/dist/aos.css';
+
+
+
 /* Components */
 import Footer from '../../components/layout/Footer.jsx';
 
 const Blog = () => {
+
+  useEffect(() => {
+    AOS.init();
+  }, [])
+
   return (
     /** Blog Page */
     <div className="blog-content">
+       <Helmet>
+        <title>Blog | Linokhan - Insights on Web Design, Development, and SEO</title>
+        <meta name="description" content="Explore Linokhan's blog for the latest insights and tips on web design, development, branding, SEO, and digital strategy. Stay informed with our expert articles and updates." />
+        <meta name="keywords" content="Linokhan blog, web design insights, web development tips, SEO strategies, branding articles, digital strategy, web design trends 2024" />
+      </Helmet>
       <div className="main">
         {/** Hero Section */}
         <div className="hero">
@@ -25,7 +44,7 @@ const Blog = () => {
           </section>
         </div>
         {/** Article */}
-        <div className="article">
+        <div className="article" data-aos="fade-up">
           <section className="section">
 
             <div className="article-intro">
@@ -162,7 +181,7 @@ const Blog = () => {
         </div>
       </div>
       {/** Footer */}
-      <Footer/>
+      <Footer />
     </div>
   )
 };

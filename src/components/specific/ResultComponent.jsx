@@ -1,9 +1,19 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 //import PropTypes from 'prop-types';
+
+// AOS Animations
+import AOS from "aos";
+import 'aos/dist/aos.css';
 
 /* Styles and css*/
 import './component.scss';
 const ResultComponent = () => {
+
+
+    useEffect(() => {
+        AOS.init();
+    }, [])
+
     const scrollContainer = useRef(null);
 
     const scrollLeft = () => {
@@ -15,7 +25,7 @@ const ResultComponent = () => {
     };
 
     return (
-        <div className="scroller-container">
+        <div className="scroller-container" data-aos="fade-up">
             {/** Sroller Header Section */}
             <div className="scroller-header">
 

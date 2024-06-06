@@ -1,26 +1,42 @@
 /* React */
-import React from "react";
+import React, { useEffect } from "react";
+
+/*React Lazy Load*/
+import LazyLoad from "react-lazyload";
 
 /* Routing */
 import { Link } from "react-router-dom";
 
 /* Images */
-import Logo from '../../assets/images/Logo-black.jpg';
+import Logo from '../../assets/images/Logo-black.webp';
 
 /* Font Awesomes Icons */
 import { faLinkedin, faSquareInstagram } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+// AOS Animations
+import AOS from "aos";
+import 'aos/dist/aos.css';
+
+
+
 const Footer = () => {
 
+
+    useEffect(() => {
+        AOS.init();
+    }, [])
     return (
         /* Footer Section */
         <footer className="footer">
-            <section className="section">
+            <section className="section" data-aos="fade-up">
                 {/** Contact Section */}
                 <div className="contact">
+                    <LazyLoad height={200}>
+                        <img src={Logo} alt="Logo of Linokhan" />
+                    </LazyLoad>
 
-                    <img src={Logo} alt="Linokhan Logo" />
+
                     <h1>As your partner, we treat your website like it is our own</h1>
                     <p>
                         Let’s find out if we’re a good fit for each other.
@@ -112,7 +128,7 @@ const Footer = () => {
                 </div>
             </section>
             {/** Copyright Section */}
-            <div className="copyright">
+            <div className="copyright" >
 
 
                 <div className="row">

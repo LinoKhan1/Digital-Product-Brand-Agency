@@ -1,15 +1,41 @@
+// React
 import React from "react";
-import Logo from '../../assets/images/Logo-white.JPG';
-import './contact.scss';
+
+// React Lazy Load
+import LazyLoad from "react-lazyload";
+
+// React Helmet
+import { Helmet } from "react-helmet";
+
+// React Routing
 import { Link } from "react-router-dom";
+
+// Images
+import Logo from '../../assets/images/Logo-white.webp';
+
+// Styles and CSS
+import './contact.scss';
+
+/* Apply Page Component */
 const Apply = () => {
     return (
 
         <div className="Contact-content">
+            <Helmet>
+                <title></title>
+                <meta />
+                <meta />
+            </Helmet>
             <div className="main">
+                {/** Options Section */}
                 <div className="options">
                     <div className="section">
-                        <Link to="/"><img src={Logo} alt="Linokhan Logo" /></Link>
+                        <Link to="/">
+                            <LazyLoad height={200}>
+                                <img src={Logo} alt="Logo of Linokhan" />
+                            </LazyLoad>
+
+                        </Link>
 
                         <h1 className="display-1">
                             Job Application

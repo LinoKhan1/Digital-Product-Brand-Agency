@@ -1,4 +1,5 @@
 import React from 'react';
+import LazyLoad from 'react-lazyload';
 import PropTypes from 'prop-types';
 
 const AuthorInfoComponent = ({ name, imageSrc }) => {
@@ -6,7 +7,9 @@ const AuthorInfoComponent = ({ name, imageSrc }) => {
         /** Author Info Component */
         <div className="author-info">
             <span className="author-span">
-                <img className="author-image" src={imageSrc} alt={`Portrait of ${name}`} />
+                <LazyLoad height={200}>
+                    <img className="author-image" src={imageSrc} alt={`Portrait of ${name}`} />
+                </LazyLoad>
                 <h2 className="author-name">{name}</h2>
             </span>
         </div>

@@ -1,5 +1,8 @@
 /* React */
-import React from "react";
+import React, {useEffect} from "react";
+
+/* React Helmet */
+import { Helmet } from "react-helmet";
 
 /* Routing */
 import { Link } from "react-router-dom";
@@ -9,20 +12,36 @@ import Footer from "../../components/layout/Footer.jsx";
 import DifferentiatorComponent from "../../components/specific/DifferentiatorComponent.jsx";
 import CoreValuesComponent from "../../components/specific/CoreValuesComponent.jsx";
 
+// AOS Animations
+import AOS from "aos";
+import 'aos/dist/aos.css';
+
+
 /* Styles and css */
-//import '../About/about.scss';
+import '../About/about.scss';
+
+/* About Page Component */
 const About = () => {
+
+  useEffect(() => {
+    AOS.init();
+  }, [])
+
   return (
-    /* About Page */
     <div className="about-content">
+       <Helmet>
+        <title>About Us | Linokhan - Leading Web Development Agency</title>
+        <meta name="description" content="Learn more about Linokhan, a leading web development agency specializing in web design, custom web application development, and user experience optimization. Our team is dedicated to providing top-notch web development services to help businesses thrive online." />
+        <meta name="keywords" content="web development agency, web design, custom web application development, user experience optimization, website marketing company, Linokhan, about Linokhan" />
+      </Helmet>
       {/* Hero Section */}
       <div className="hero">
         <section className="section">
           <div className="row">
             <div className="col-lg-7">
               <div className="hero-text">
-                <h1>Digital Product</h1>
-                <p>linokhan.com is a dynamic digital product and brand agency located in the vibrant city of Cape Town, South Africa. Established in 2023, our agency has quickly emerged as a trusted partner for businesses seeking to establish a formidable online presence and drive tangible returns on their digital investments.</p>
+                <h1>About Linokhan</h1>
+                <p>linokhan.com is a dynamic web design and development agency located in the vibrant city of Cape Town, South Africa. Established in 2023, our agency has quickly emerged as a trusted partner for businesses seeking to establish a formidable online presence and drive tangible returns on their digital investments.</p>
               </div>
             </div>
           </div>
@@ -30,15 +49,15 @@ const About = () => {
       </div>
 
       {/* About Section */}
-      <div className="about-section">
+      <div className="about-section" data-aos="fade-up">
         <section className="section">
           <div className="row">
             <div className="col-lg-5">
-              <p>_Who We Are</p>
+              <p>_Web Design and Development</p>
             </div>
             <div className="col-lg-6">
-              <h2>linokhan.com is a Full Service Web Development and Branding Agency.</h2>
-              <h2>We are a dedicated team, offering a comprehensive approach to brand strategy, digital design, development, and SEOs. Our team chooses to work with brands that excite and inspire. Together, we are working to grow forward-thinking, relevant brands.</h2>
+              <h2>linokhan.com is a Full Service Web Development and Brand Design Agency.</h2>
+              <h2>We are a dedicated team, offering a comprehensive approach to brand strategy, web design, development, and SEOs. Our team chooses to work with brands that excite and inspire. Together, we are working to grow forward-thinking, relevant brands.</h2>
               <h2>Our mission at linokhan.com is clear: to empower our clients by establishing their online presence and solving their problems through innovative marketing and design services, ultimately generating a measurable return on investment.</h2>
               <Link to="/get_proposal"><button>Get a proposal</button></Link>
 
@@ -55,7 +74,7 @@ const About = () => {
       <DifferentiatorComponent />
 
       {/* Resources Section */}
-      <div className="resources-section">
+      <div className="resources-section" data-aos="fade-up">
         <section className="section">
           <div className="row">
             <div className="col-lg-5">

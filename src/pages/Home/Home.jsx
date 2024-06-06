@@ -1,10 +1,21 @@
-import React from "react";
+// React
+import React, { useEffect } from "react";
+// React Lazy Load
+import LazyLoad from "react-lazyload";
+// React Helmet
+import { Helmet } from "react-helmet";
+
+// React Routing
 import { Link } from "react-router-dom";
 
 // Styles and CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.css';
 import './Home.scss';
+
+// AOS Animations
+import AOS from "aos";
+import 'aos/dist/aos.css';
 
 // Font Awesome Icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -18,16 +29,27 @@ import AuthorInfoComponent from "../../components/specific/AuthorInfoComponent.j
 import ResultComponent from "../../components/specific/ResultComponent.jsx";
 
 // Images
-import Profile_img_2 from '../../assets/images/testimonial_img2.jpg';
-import Profile_img_3 from '../../assets/images/testimonial_img3.jpg';
-import Profile_img_4 from '../../assets/images/testimonial_img4.jpg';
-import BlogImage from '../../assets/images/Image.jpg';
+import Profile_img_2 from '../../assets/images/testimonial_img2.webp';
+import Profile_img_3 from '../../assets/images/testimonial_img3.webp';
+import Profile_img_4 from '../../assets/images/testimonial_img4.webp';
+import BlogImage from '../../assets/images/Image.webp';
 
+/* Home Page Component */
 const Home = () => {
-  return (
-    <div className="home-content">
-      <div className="main">
 
+  useEffect(() => {
+    AOS.init();
+  }, [])
+
+  return (
+
+    <div className="home-content">
+      <Helmet>
+        <title>Home | Linokhan - Web Design and Development Services</title>
+        <meta name="description" content="Professional web design services that drive revenue. Get a stunning website with our expert development, SEO, and branding solutions. Contact Linokhan today!" />
+        <meta name="keywords" content="web development, web design, website development, web application, marketing website, brand design, user experience, user interface, responsive design, SEO" />
+      </Helmet>
+      <div className="main">
         {/* Hero Section */}
         <div className="hero">
           <div className="section">
@@ -35,7 +57,7 @@ const Home = () => {
               <div className="col-lg-7">
                 <div className="hero-text">
                   <h1 className="display-1">Get a beautiful website that drives revenue</h1>
-                  <p>Results-driven web design, development, SEO, branding, copywriting & digital strategy.</p>
+                  <p>Results-driven web design, development, SEO, brand design, and user experience optimization.</p>
                   <span>
                     <Link to="/get_proposal">
                       <button className="btn-primary">
@@ -64,7 +86,7 @@ const Home = () => {
         </div>
 
         {/* Testimonials Section */}
-        <div className="testimonial">
+        <div className="testimonial" data-aos="fade-in">
           <div className="section">
             <div className="row">
               {[
@@ -105,7 +127,7 @@ const Home = () => {
         <ResultComponent />
 
         {/* Resources Section */}
-        <div className="resources">
+        <div className="resources" data-aos="fade-in">
           <div className="section">
             <div className="title">
               <h1>Helpful resources</h1>
@@ -131,7 +153,9 @@ const Home = () => {
                 <div className="col" key={index}>
                   <div className="blog">
                     <div className="img">
-                      <img className="img-fluid" src={resource.image} alt="Blog_Image" />
+                      <LazyLoad height={200}>
+                        <img className="img-fluid" src={resource.image} alt="SEO Blog" />
+                      </LazyLoad>
                     </div>
                     <div className="blog-preview">
                       <h2>{resource.title}</h2>
@@ -146,7 +170,7 @@ const Home = () => {
 
 
         {/* Questions Section */}
-        <div className="questions">
+        <div className="questions" data-aos="fade-up">
           <div className="section">
             <div className="row">
               <div className="title">

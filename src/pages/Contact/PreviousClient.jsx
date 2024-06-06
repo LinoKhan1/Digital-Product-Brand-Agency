@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
-import Logo from '../../assets/images/Logo-white.JPG';
+import Logo from '../../assets/images/Logo-white.webp';
+import LazyLoad from "react-lazyload";
 import './contact.scss';
 import { Link } from "react-router-dom";
 import emailjs from '@emailjs/browser';
@@ -23,7 +24,11 @@ const Client = () => {
                 <div className="main contact-form">
                     <div className="options">
                         <div className="section">
-                            <Link to="/"><img src={Logo} alt="Linokhan Logo" /></Link>
+                            <Link to="/">
+                                <LazyLoad height={200}>
+                                    <img src={Logo} alt="Logo of Linokhan" />
+                                </LazyLoad>
+                            </Link>
                             <h1 className="display-1">Get In Touch</h1>
                             <p>
                                 Please submit the form below. We will get back to you soon 😃.

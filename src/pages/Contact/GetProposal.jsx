@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import Logo from '../../assets/images/Logo-white.JPG';
+import Logo from '../../assets/images/Logo-white.webp';
+import LazyLoad from "react-lazyload";
 import './contact.scss';
 import { Link } from "react-router-dom";
 import { useRef } from "react";
@@ -39,7 +40,9 @@ const Proposal = () => {
                 <div className="main contact-form">
                     <div className="options">
                         <div className="section">
-                            <Link to="/"><img src={Logo} alt="Linokhan Logo"/></Link>
+                            <Link to="/"> <LazyLoad height={200}>
+                                <img src={Logo} alt="Logo of Linokhan" />
+                            </LazyLoad></Link>
                             <h1 className="display-1">Get a proposal</h1>
                             <p>
                                 We will be in touch to book a discovery call shortly after you submit the form below 😃.

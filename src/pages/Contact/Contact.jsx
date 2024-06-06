@@ -1,18 +1,27 @@
 import React from "react";
-import Logo from '../../assets/images/Logo-white.JPG';
+import { Helmet } from "react-helmet";
+import LazyLoad from "react-lazyload";
+import Logo from '../../assets/images/Logo-white.webp';
 import './contact.scss';
 import { Link } from "react-router-dom";
 const Contact = () => {
     return (
         /* Contact Page */
         <div className="Contact-content">
+            <Helmet>
+                <title>Contact Us | Linokhan - Get in Touch for Web Development Services</title>
+                <meta name="description" content="Reach out to Linokhan, your trusted web development agency. Contact us for inquiries about web design, custom application development, and user experience optimization. We're here to help you achieve your digital goals." />
+                <meta name="keywords" content="contact Linokhan, web development inquiries, custom web application development, user experience optimization, web design, web development agency" />
+            </Helmet>
             <div className="main">
 
                 {/** Contact Options */}
                 <div className="options">
                     <div className="section">
 
-                        <Link to="/"><img src={Logo} alt="logo-image" /></Link>
+                        <Link to="/"> <LazyLoad height={200}>
+                            <img src={Logo} alt="Logo of Linokhan" />
+                        </LazyLoad></Link>
                         <h1 className="display-1">
                             Contact us
                         </h1>

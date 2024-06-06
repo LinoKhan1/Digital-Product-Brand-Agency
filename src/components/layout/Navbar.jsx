@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Logo from "../../assets/images/Logo-black.jpg";
+import Logo from "../../assets/images/Logo-black.webp";
 import '@fortawesome/fontawesome-free/css/all.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRocket } from "@fortawesome/free-solid-svg-icons";
@@ -17,7 +17,7 @@ const Navbar = () => {
         <>
             <nav className="navbar navbar-expand-lg">
                 <div className="container-fluid">
-                    <Link className="navbar-brand" to="/"><img src={Logo} alt="Linokhan Logo" /></Link>
+                    <Link className="navbar-brand" to="/"><img src={Logo} alt="Logo of Linokhan" /></Link>
                     <button className="navbar-toggler" type="button" onClick={toggleNav} aria-label="Toggle navigation" >
                         <span className="navbar-toggler-icon text-white"></span>
                     </button>
