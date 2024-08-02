@@ -18,10 +18,10 @@ import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 
 const services = [
 
-  { id: 1, name: 'Design', image: DesignImage },
-  { id: 2, name: 'Branding', image: BrandingImage },
+  { id: 1, name: 'Web Design and Development', image: DesignImage },
+  { id: 2, name: 'Brand Design', image: BrandingImage },
   { id: 3, name: 'SEO', image: SEOImage },
-  { id: 4, name: 'UX/UI', image: UXUIImage },
+  { id: 4, name: 'User Experience and Interface Optimization', image: UXUIImage },
 
 ];
 
@@ -52,7 +52,7 @@ const ServiceComponent = () => {
         </div>
         <div className="col">
           <div className="service-list" data-testid="service-list">
-            <h1>Everything your site needs for success</h1>
+            <h1>Services that drives sucess!</h1>
             <ul>
               {services.map(service => (
                 <li key={service.id} onMouseEnter={() => handleMouseEnter(service.image)}>
@@ -64,6 +64,23 @@ const ServiceComponent = () => {
           </div>
         </div>
       </div>
+      {/* Structured Data */}
+      {/*<script type="application/ld+json">
+        {`
+        {
+          "@context": "http://schema.org",
+          "@type": "Service",
+          "serviceType": "${services.name}",
+          "description": "${services.description}",
+          "provider": {
+            "@type": "Organization",
+            "name": "Linokhan",
+            "url": "https://www.linokhan.com"
+          },
+          "image": "${services.image}"
+        }
+        `}
+      </script>*/}
     </section>
   );
 };

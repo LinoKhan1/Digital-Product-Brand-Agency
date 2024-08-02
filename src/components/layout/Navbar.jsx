@@ -27,17 +27,17 @@ const Navbar = () => {
                                 <Link className="nav-link text-white" aria-current="page" to="/" onClick={toggleNav}>Home</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link text-white" to="/about" onClick={toggleNav}>About</Link>
+                                <Link className="nav-link text-white" to="/about-us" onClick={toggleNav}>About</Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link text-white" to="/blog" onClick={toggleNav}>Blog</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link text-white" to="/contact" onClick={toggleNav}>Contact</Link>
+                                <Link className="nav-link text-white" to="/contact-us" onClick={toggleNav}>Contact</Link>
                             </li>
                         </ul>
                         <form className="d-flex">
-                            <Link to="/get_proposal">
+                            <Link to="/get-proposal">
                                 <button className="btn-primary"><FontAwesomeIcon className="rocket" icon={faRocket} />Get a proposal</button>
                             </Link>
                         </form>

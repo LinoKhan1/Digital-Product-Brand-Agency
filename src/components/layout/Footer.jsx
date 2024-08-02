@@ -42,7 +42,7 @@ const Footer = () => {
                         Let’s find out if we’re a good fit for each other.
                     </p>
                     <span>
-                        <Link to="/get_proposal">
+                        <Link to="/get-proposal">
                             <button className="btn-primary">Get a proposal</button>
                         </Link>
                         <button onClick={() => document.getElementById('service').scrollIntoView({ behavior: 'smooth' })} className="btn-secondary"> View services</button>
@@ -57,7 +57,7 @@ const Footer = () => {
                             <ul>
 
                                 <li>
-                                    <Link className="link" to="/about">
+                                    <Link className="link" to="/about-us">
                                         learn more
                                     </Link>
                                 </li>
@@ -85,22 +85,22 @@ const Footer = () => {
                             <h2>Get in touch</h2>
                             <ul>
                                 <li>
-                                    <Link className="link" to="/get_proposal">
+                                    <Link className="link" to="/get-proposal">
                                         Get a proposal
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link className="link" to="/contact">
+                                    <Link className="link" to="/contact-us">
                                         Contact us
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link className="link" to="/apply">
+                                    <Link className="link" to="/apply-job">
                                         Careers
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link className="link" to="/apply">
+                                    <Link className="link" to="/apply-job">
                                         Apply now
                                     </Link>
                                 </li>

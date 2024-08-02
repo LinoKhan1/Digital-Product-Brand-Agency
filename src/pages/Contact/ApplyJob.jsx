@@ -19,12 +19,12 @@ import './contact.scss';
 /* Apply Page Component */
 const Apply = () => {
     return (
-
+        /* Apply Job Page */
         <div className="Contact-content">
             <Helmet>
-                <title></title>
-                <meta />
-                <meta />
+                <title>Job Application | Linokhan - Web Design & Development Agency</title>
+                <meta name="description" content="Currently, we are not hiring. Please check back later or follow us on Indeed and LinkedIn for job postings." />
+                <meta name="keywords" content="job application, hiring, careers, job opportunities, Linokhan, digital agency" />
             </Helmet>
             <div className="main">
                 {/** Options Section */}
@@ -34,14 +34,11 @@ const Apply = () => {
                             <LazyLoad height={200}>
                                 <img src={Logo} alt="Logo of Linokhan" />
                             </LazyLoad>
-
                         </Link>
-
                         <h1 className="display-1">
                             Job Application
                         </h1>
                         <p>We are not hiring at this time, and we apologize for the inconvenience. We will post jobs on Indeed and/or LinkedIn when we are hiring.
-
                         </p>
                         <Link to="/"><button>Back to homepage</button></Link>
                     </div>

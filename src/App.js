@@ -1,5 +1,9 @@
+/* React */
 import React from "react";
+/* React Routing */
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+
+/* Components */
 import Layout from "./components/layout/Layout.jsx";
 import Home from "./pages/Home/Home.jsx";
 import Blog from "./pages/Blog/Blog.jsx";
@@ -10,11 +14,15 @@ import GetProposal from "./pages/Contact/GetProposal.jsx";
 import Apply from "./pages/Contact/ApplyJob.jsx";
 import Sell from './pages/Contact/SellProduct.jsx';
 import Client from './pages/Contact/PreviousClient.jsx';
+
+/* Styles and CSS */
 import './styles/Global/global.scss';
 import './pages/Home/Home.scss';
 import './components/layout/layout.scss';
 
 function App() {
+
+
   return (
     <BrowserRouter>
       <MainRoutes />
@@ -24,25 +32,25 @@ function App() {
 
 function MainRoutes() {
   const location = useLocation();
-  const hideLayoutContact = location.pathname === '/contact';
-  const hideLayoutProposal = location.pathname === '/get_proposal';
-  const hideLayoutApply = location.pathname === '/apply';
-  const hideLayoutSell = location.pathname === '/sell';
-  const hideClient = location.pathname === '/client';
+  const hideLayoutContact = location.pathname === '/contact-us';
+  const hideLayoutProposal = location.pathname === '/get-proposal';
+  const hideLayoutApply = location.pathname === '/apply-job';
+  const hideLayoutSell = location.pathname === '/sell-product';
+  const hideClient = location.pathname === '/previous-client';
 
   return (
     <div>
-      {!hideLayoutContact && !hideClient && !hideLayoutSell && !hideLayoutApply  && !hideLayoutProposal && <Layout />}
+      {!hideLayoutContact && !hideClient && !hideLayoutSell && !hideLayoutApply && !hideLayoutProposal && <Layout />}
 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/blog" element={<Blog />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/get_proposal" element={<GetProposal/>}/>
-        <Route path="/apply" element={<Apply/>}/>
-        <Route path="/sell" element={<Sell/>}/>
-        <Route path="/client" element={<Client/>}/>
+        <Route path="/about-us" element={<About />} />
+        <Route path="/contact-us" element={<Contact />} />
+        <Route path="/get-proposal" element={<GetProposal />} />
+        <Route path="/apply-job" element={<Apply />} />
+        <Route path="/sell-product" element={<Sell />} />
+        <Route path="/previous-client" element={<Client />} />
         <Route path="*" element={<NoPage />} />
       </Routes>
     </div>
@@ -50,3 +58,4 @@ function MainRoutes() {
 }
 
 export default App;
+

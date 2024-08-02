@@ -28,32 +28,45 @@ const Contact = () => {
                         <p>
                             To help us connect you with the right person, please tell us what describes you best:
                         </p>
-                        <Link to="/get_proposal"> <button>
+                        <Link to="/get-proposal"> <button>
                             I’m interested in hiring linokhan.com for a project
                         </button></Link>
-                        <Link to="/apply">
+                        <Link to="/apply-job">
                             <button>
                                 I’m interested in applying for a job a linokhan.com
                             </button>
                         </Link>
-                        <Link to="/sell">
+                        <Link to="/sell-product">
                             <button>
                                 I’m interested in selling a product to linokhan.com
                             </button>
                         </Link>
 
-                        <Link to="/client">
+                        <Link to="/previous-client">
                             <button>
                                 I’m an existing client or past client of linokhan.com
                             </button>
                         </Link>
-
-
                     </div>
                 </div>
-
-
             </div>
+            {/* Structured Data */}
+            <script type="application/ld+json">
+                {`
+            {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "name": "Linokhan",
+                "url": "https://www.linokhan.com",
+                "logo": "https://www.linokhan.com/assets/images/Logo-white.webp",
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "telephone": "+1234567890",
+                    "contactType": "customer service"
+                }
+            }
+            `}
+            </script>
         </div>
     )
 };

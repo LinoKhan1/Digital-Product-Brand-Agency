@@ -47,7 +47,7 @@ describe("About Page", () => {
                 <About />
             </MemoryRouter>
         );
-        expect(screen.getByText(/Our Culture, Values, and Beliefs/)).toBeInTheDocument();
+        expect(screen.getByText(/Core Values/)).toBeInTheDocument();
     });
 
     test("renders DifferentiatorComponent", () => {
@@ -56,7 +56,7 @@ describe("About Page", () => {
                 <About />
             </MemoryRouter>
         );
-        expect(screen.getByText(/_Our Differentiators/)).toBeInTheDocument();
+        expect(screen.getByText(/Our Differentiators/)).toBeInTheDocument();
     });
 
     test("renders Resources section with correct content", () => {

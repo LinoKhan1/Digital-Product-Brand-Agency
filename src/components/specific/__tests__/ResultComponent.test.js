@@ -18,7 +18,7 @@ describe('Result Component', ()=>{
     });
 
     test('renders Scroller Header section', ()=>{
-        expect(screen.getByText(/Over the past years, we have delivered measurable results for various businesses./)).toBeInTheDocument();
+        expect(screen.getByText(/Our Proven Results/)).toBeInTheDocument();
     });
 
 });

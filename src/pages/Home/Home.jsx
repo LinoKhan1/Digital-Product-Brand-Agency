@@ -59,7 +59,7 @@ const Home = () => {
                   <h1 className="display-1">Get a beautiful website that drives revenue</h1>
                   <p>Results-driven web design, development, SEO, brand design, and user experience optimization.</p>
                   <span>
-                    <Link to="/get_proposal">
+                    <Link to="/get-proposal">
                       <button className="btn-primary">
                         <FontAwesomeIcon className="rocket" icon={faRocket} /> Get a proposal
                       </button>

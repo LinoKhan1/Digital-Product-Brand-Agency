@@ -19,7 +19,7 @@ describe('Core Values Component', () => {
     });
 
     test('renders Title Section', () => {
-        expect(screen.getByText(/Our Culture, Values, and Beliefs/)).toBeInTheDocument();
+        expect(screen.getByText(/Core Values/)).toBeInTheDocument();
     });
 
     /*test('renders Value Section', () => {

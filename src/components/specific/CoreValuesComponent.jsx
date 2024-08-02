@@ -36,7 +36,7 @@ const CoreValuesComponent = () => {
                 <div className="row">
                     {/** Title Section */}
                     <div className="col title-column">
-                        <h1>Our Culture, Values, and Beliefs</h1>
+                        <h1>Core Values</h1>
                     </div>
                     {/** Values Section */}
                     <div className="col values-column">

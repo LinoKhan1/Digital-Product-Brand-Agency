@@ -10,7 +10,7 @@ const DifferentiatorComponent = () => {
     useEffect(() => {
         AOS.init();
     }, [])
-    
+
     const scrollContainer = useRef(null);
 
     const scrollLeft = () => {
@@ -26,9 +26,9 @@ const DifferentiatorComponent = () => {
 
         <div className="scroller-container" data-aos="fade-up">
             <div className="scroller-header">
-                <p>
-                    _Our Differentiators
-                </p>
+                <h1>
+                    Our Differentiators
+                </h1>
                 <div className="scroller-buttons">
                     <div className="scroller-buttons">
                         <button className="scroll-button" onClick={scrollLeft} data-testid="scroll-left-button">‹</button>
@@ -70,7 +70,8 @@ const DifferentiatorComponent = () => {
                         <h2>Innovative Edage</h2>
                         <p>
 
-                            We embrace innovation, staying ahead of industry trends and technological advancements to deliver cutting-edge digital strategies.                        </p>
+                            We embrace innovation, staying ahead of industry trends and technological advancements to deliver cutting-edge digital strategies.
+                        </p>
 
                     </div>
 
